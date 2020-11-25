@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Login To Sopal</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+background:transparent;
+}</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks</set>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" stretch="0">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">#frame
+{
+border-radius:20px;
+/*background:qconicalgradient(cx:0, cy:0, angle:98.8, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(167, 255, 53, 255));*/
+background: qlineargradient(spread:pad, x1:0.516899, y1:0.154, x2:0.538, y2:1, stop:0 rgba(42, 45, 89, 255), stop:1 rgba(0, 255, 19, 255));
+}
+
+
+QLineEdit
+{
+
+background :qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(139, 140, 138, 255), stop:1 rgba(255, 255, 255, 255));
+border-radius:10px;
+color : #717072;
+font-family:century;
+border-bottom:1px solid#717072;
+
+}
+
+
+QLineEdit:hover
+{
+background : qconicalgradient(cx:0, cy:0, angle:264, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(167, 255, 53, 255));
+border-radius:10px;
+color : #717072;
+border-bottom:1px solid rgb(17, 0, 255);
+font-family:century;
+
+}
+
+#label{
+font-family:century gothic;
+font-size:24px;
+color :qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(139, 140, 138, 255), stop:1 rgba(255, 255, 255, 255));
+}
+#FuseSmart{
+
+    image: url(C:/Users/Nasreddine/Documents/FuseSmart/IMG/logo.png);
+    subcontrol-position: right center;
+    subcontrol-origin: padding;
+    left: -2px;
+	border-radius:1px;
+}
+
+#label_errur
+{
+color: rgb(255, 30, 0);
+font-size:10px;
+}
+QLineEdit:focus
+{
+background : qconicalgradient(cx:0, cy:0, angle:264, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(167, 255, 53, 255));
+border-radius:10px;
+color : #717072;
+border-bottom:1px solid rgb(81, 255, 0);
+font-family:century;
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>20</y>
+         <width>421</width>
+         <height>391</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>640</width>
+         <height>480</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#groupBox_2{
+background : transparent;
+border-radius:20px;
+border:0px;
+}
+
+QPushButton
+{
+background : qlineargradient(spread:pad, x1:1, y1:0.938, x2:1, y2:1, stop:0 rgba(53, 54, 83, 255), stop:1 rgba(38, 0, 255, 255));
+color : white ;
+border-radius:15px;
+
+}
+QPushButton:hover
+{
+background:	qlineargradient(spread:pad, x1:1, y1:0.699, x2:1, y2:1, stop:0 rgba(53, 54, 83, 255), stop:1 rgba(38, 0, 255, 255));
+border-radius:10px;
+}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLabel" name="FuseSmart">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>-50</y>
+          <width>371</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>130</y>
+          <width>361</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox
+{
+background : ;
+border-radius:10px;
+
+}
+</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <widget class="QPushButton" name="pushButton">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>160</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Se connecter</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="user">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Utilisateur</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="password">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Mot de passe</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>-20</x>
+           <y>0</y>
+           <width>401</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Se connecter à Sopal</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_errur">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>210</y>
+           <width>341</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="exit">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>10</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+    image: url(C:/Users/Nasreddine/Documents/FuseSmart/IMG/x.png);
+    subcontrol-position: right center;
+    subcontrol-origin: padding;
+    left: -2px;
+	border-radius:1px;
+}
+
+QPushButton:hover
+{
+border-bottom:2px solid ;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <tabstops>
+  <tabstop>exit</tabstop>
+  <tabstop>user</tabstop>
+  <tabstop>password</tabstop>
+  <tabstop>pushButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
