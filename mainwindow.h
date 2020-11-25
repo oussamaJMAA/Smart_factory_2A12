@@ -8,6 +8,7 @@
 #include <QMediaPlayer>
 #include <QDebug>
 #include <materiaux.h>
+#include <fournisseurs.h>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -78,6 +79,25 @@ private slots:
 
     void on_pushButton_24_clicked();
 
+    void on_pushButton_22_clicked();
+
+
+
+    void on_pushButton_29_clicked();
+
+    void on_pushButton_26_clicked();
+
+    void on_supprimer_4_clicked();
+
+    void on_trier_clicked();
+
+
+    void on_supprimer_5_clicked();
+
+   // void on_tableView_2_activated(const QModelIndex &index);
+
+    void on_tableView_activated(const QModelIndex &index);
+
 private:
     Ui::MainWindow *ui;
       QPropertyAnimation *animation;
@@ -85,6 +105,7 @@ private:
       QPropertyAnimation *animation2;
  QMediaPlayer *musicConect=new QMediaPlayer;
  materiaux Etmp;
+ fournisseurs Etmp1;
 
 };
 #endif // MAINWINDOW_H
