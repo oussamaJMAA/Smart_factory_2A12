@@ -501,7 +501,7 @@ bool acceuil::verifEmail(QString chaine)
 void acceuil::on_tabemployeurs_activated(const QModelIndex &index)
 {
 
-    if(ui->tabemployeurs->DoubleClicked )
+    if(ui->tabemployeurs->DoubleClicked && (ui->tabemployeurs->model()->data(index).toString()[0]>'0' &&  ui->tabemployeurs->model()->data(index).toString()[0]<'9') )
     {   QString val=ui->tabemployeurs->model()->data(index).toString();
 
         if (ui->radiosuppemploye->isChecked())
