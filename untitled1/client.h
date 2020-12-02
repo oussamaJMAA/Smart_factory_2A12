@@ -15,6 +15,7 @@ public:
     bool ajouter();
     QSqlQueryModel* afficher();
     bool supprimer(QString);
+    bool modifier(QString,QString,QString);
     Client();
     Client(QString,QString,QString);
 private:

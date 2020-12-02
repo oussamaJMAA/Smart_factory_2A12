@@ -50,9 +50,25 @@ private slots:
 
     void on_pushButton_8_clicked();
 
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_19_clicked();
+
+    void on_pushButton_20_clicked();
+
+    void on_comboBox__pour_tri_Client_currentIndexChanged(int index);
+
+    void on_pushButton_22_clicked();
+
+    void on_pushButton_21_clicked();
+
+    void on_pushButton_7_clicked();
+
 private:
     Ui::MainWindow *ui;
     Client c;
     Contrat co;
+    Client tabc;
+    Contrat tabco;
 };
 #endif // MAINWINDOW_H

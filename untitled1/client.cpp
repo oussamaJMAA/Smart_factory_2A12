@@ -30,7 +30,7 @@ bool Client::ajouter()
 {
 
     QSqlQuery query;
-         query.prepare("INSERT INTO CLIENT (id, nom, adresse) "
+         query.prepare("INSERT INTO CLIENT (id, nom, adr) "
                        "VALUES (:id, :forename, :surname)");
          query.bindValue(":id",id);
          query.bindValue(":forename", nom);
@@ -38,11 +38,6 @@ bool Client::ajouter()
         return query.exec();
 
 }
-
-
-
-
-
 
 QSqlQueryModel* Client::afficher()
 {
@@ -63,12 +58,31 @@ QSqlQueryModel* Client::afficher()
 bool Client::supprimer(QString )
 {
     QSqlQuery query;
-         query.prepare(" Delete from Client where id=:id");
-         query.bindValue(0, id);
+         query.prepare(" Delete from CLIENT WHERE ID =: ID ");
+         query.bindValue(0,id);
 
         return query.exec();
 
 }
+
+
+bool Client::modifier(QString id,QString nom,QString adr)
+{
+    QSqlQuery query;
+    bool test= false;
+        query.exec("UPDATE CLIENT set NOM='"+nom+"', ADR='"+adr+"'  WHERE ID='"+id+"'");
+
+     test=true;
+     return test;
+
+}
+
+
+
+
+
+
+
 
 
 

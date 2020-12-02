@@ -2,6 +2,7 @@
 #include <QSqlQuery>
 #include <QDebug>
 #include <QObject>
+#include<QDate>
 
 Contrat::Contrat()
 {
@@ -45,12 +46,13 @@ float Contrat::get_pt(){return qte*prix;}
 
 
 bool Contrat::ajouter()
-{ bool test = false;
+{
     QSqlQuery query;
+    pt=qte*prix;
     QString chqt = QString::number(qte);
     QString chpt = QString::number(pt);
     QString chprix = QString::number(prix);
-          query.prepare("INSERT INTO client (num, type , qte , pt , prix , datec) "
+          query.prepare("INSERT INTO CONTRAT (NUM_C, TYPE , QUANTITE , PRIXTOTAL , PRIXELEMENT , DATEC) "
                         "VALUES (:num, :type, :quantity , :pt ,:prix , :date)");
           query.bindValue(":num", num);
           query.bindValue(":type", type);
@@ -58,9 +60,26 @@ bool Contrat::ajouter()
           query.bindValue(":pt", chpt);
           query.bindValue(":prix", chprix);
           query.bindValue(":date", datec);
-          query.exec();
+          return query.exec();
 
-   return test;
+}
+bool Contrat::modifier(QString num,QString type,float prix,int qte,float pt)
+{
+    QSqlQuery query;
+    QString chprix = QString::number(prix);
+    pt=prix*qte;
+    QString chpt = QString::number(pt);
+    QString chqt = QString::number(qte);
+    bool test= false;
+        query.exec("UPDATE CONTRAT set TYPE='"+type+"', PRIXELEMENT='"+chprix+"', QUANTITE ='"+chqt+"', PRIXTOTAL='"+chpt+"'  WHERE NUM_C='"+num+"'");
+
+     test=true;
+     return test;
+
+
+
+
+
 }
 
 
@@ -88,12 +107,15 @@ QSqlQueryModel* Contrat::afficher()
 bool Contrat::supprimer(QString )
 {
     QSqlQuery query;
-         query.prepare(" Delete from Contrat where num=:num");
+         query.prepare(" Delete from CONTRAT WHERE NUM_C=:NUM_C");
          query.bindValue(0, num);
 
         return query.exec();
 
 }
+
+
+
 
 
 
