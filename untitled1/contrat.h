@@ -23,6 +23,8 @@ public:
     QSqlQueryModel* afficher();
     bool modifier(QString, QString,float,int,float);
     bool supprimer(QString);
+    QSqlQueryModel * trierc();
+    QSqlQueryModel *rechercherc(QString);
     Contrat();
     Contrat(QString,QString,float,int,QDate,float);
 

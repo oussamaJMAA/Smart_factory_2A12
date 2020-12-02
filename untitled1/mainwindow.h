@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 #include "client.h"
 #include "contrat.h"
+#include <QPrinter>
+#include <QPrintDialog>
+#include <QPrinterInfo>
 
 #include <QMainWindow>
 
@@ -14,6 +17,8 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+
+    void print(QString path, QByteArray ba);
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
@@ -63,6 +68,16 @@ private slots:
     void on_pushButton_21_clicked();
 
     void on_pushButton_7_clicked();
+
+    void on_pushButton_23_clicked();
+
+    void on_pushButton_24_clicked();
+
+    void on_pushButton_25_clicked();
+
+    void on_pushButton_26_clicked();
+
+    void on_print_clicked();
 
 private:
     Ui::MainWindow *ui;

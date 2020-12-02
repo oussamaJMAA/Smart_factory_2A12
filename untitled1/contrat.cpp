@@ -117,6 +117,49 @@ bool Contrat::supprimer(QString )
 
 
 
+QSqlQueryModel* Contrat::trierc()
+{
+  QSqlQueryModel* model=new QSqlQueryModel();
+
+
+   model->setQuery("SELECT* from Contrat order by  PRIXELEMENT , PRIXTOTAL , TYPE , QUANTITE , DATEC");
+   model->setHeaderData(0, Qt::Horizontal, QObject::tr("NUM_C"));
+   model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRIXELEMENT"));
+   model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRIXTOTAL"));
+   model->setHeaderData(3, Qt::Horizontal, QObject::tr("TYPE"));
+   model->setHeaderData(4, Qt::Horizontal, QObject::tr("QUANTITE "));
+   model->setHeaderData(5, Qt::Horizontal, QObject::tr("DATEC"));
+
+
+  return  model;
+}
+
+
+
+
+QSqlQueryModel *Contrat::rechercherc(QString chaine1){
+
+
+    QSqlQueryModel * model =new QSqlQueryModel();
+
+   QSqlQuery query ;
+       model->setQuery("SELECT* FROM CONTRAT WHERE NOM_C like '%"+chaine1+"' OR PRIXELEMENT like '%"+chaine1+"'  OR PRIXTOTAL like '%"+chaine1+"' OR TYPE like '%"+chaine1+"'");
+       model->setHeaderData(0, Qt::Horizontal, QObject::tr("NUM_C"));
+       model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRIXELEMENT"));
+       model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRIXTOTAL"));
+       model->setHeaderData(3, Qt::Horizontal, QObject::tr("TYPE"));
+       model->setHeaderData(4, Qt::Horizontal, QObject::tr("QUANTITE"));
+       model->setHeaderData(5, Qt::Horizontal, QObject::tr("DATEC"));
+    return model;
+
+
+}
+
+
+
+
+
+
 
 
 

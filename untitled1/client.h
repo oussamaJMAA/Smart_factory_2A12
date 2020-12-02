@@ -18,6 +18,9 @@ public:
     bool modifier(QString,QString,QString);
     Client();
     Client(QString,QString,QString);
+    QSqlQueryModel * trier();
+    QSqlQueryModel *rechercher(QString);
+
 private:
     QString id,nom,adr;
 };

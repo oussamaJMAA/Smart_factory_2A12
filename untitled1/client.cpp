@@ -78,6 +78,34 @@ bool Client::modifier(QString id,QString nom,QString adr)
 }
 
 
+QSqlQueryModel *Client::trier(){
+
+
+    QSqlQueryModel * model =new QSqlQueryModel();
+    model->setQuery("select * from Client order by ID , NOM");
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("NOM"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("ADR"));
+
+return model;
+}
+
+
+QSqlQueryModel *Client::rechercher(QString chaine){
+
+
+    QSqlQueryModel * model =new QSqlQueryModel();
+
+   QSqlQuery query ;
+       model->setQuery("SELECT* FROM CLIENT WHERE NOM like '%"+chaine+"' OR ADR like '%"+chaine+"'");
+       model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
+       model->setHeaderData(1,Qt::Horizontal,QObject::tr("NOM"));
+       model->setHeaderData(2,Qt::Horizontal,QObject::tr("ADR"));
+    return model;
+
+}
+
+
 
 
 

@@ -43,9 +43,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->lineEdit_id->setValidator(new QIntValidator(0,9999999,this));
     ui->lineEdit_p->setValidator(new QIntValidator(0,999999,this));
     ui->lineEdit_pt->setValidator(new QIntValidator(0,999999,this));
+    ui->lineEdit_p->setValidator(new QIntValidator(0,999999,this));
+    ui->lineEdit_p_2->setValidator(new QIntValidator(0,999999,this));
     ui->lineEdit_qte->setValidator(new QIntValidator(0,999,this));
     ui->tabClient->setModel(c.afficher());
     ui->tabContrat->setModel(co.afficher());
+
 
 
 }
@@ -268,12 +271,75 @@ void MainWindow::on_pushButton_22_clicked()
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 }
 
+
+
+
 void MainWindow::on_pushButton_21_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
 
+
+
+
 void MainWindow::on_pushButton_7_clicked()
 {
     ui->stackedWidget->setCurrentIndex(8);
+}
+
+
+
+
+
+void MainWindow::on_pushButton_23_clicked()
+{
+    ui->tabClient->setModel(tabc.trier());
+}
+
+
+
+
+
+void MainWindow::on_pushButton_24_clicked()
+{
+   ui->tabContrat->setModel(tabco.trierc());
+}
+
+
+
+
+
+void MainWindow::on_pushButton_25_clicked()
+{
+    QString chaine;
+    chaine=ui->lineEdit_recherche->text();
+    Client cl;
+
+    QSqlQueryModel * model =new QSqlQueryModel();
+    model = cl.rechercher(chaine);
+    ui->tabClient->setModel(model);
+
+}
+
+
+
+
+
+void MainWindow::on_pushButton_26_clicked()
+{
+    QString chaine1;
+    chaine1=ui->lineEdit_recherche_2->text();
+    Contrat col;
+    QSqlQueryModel * model1 =new QSqlQueryModel();
+    model1 = col.rechercherc(chaine1);
+    ui->tabContrat->setModel(model1);
+}
+
+void MainWindow::on_print_clicked()
+{
+    QPrinter printer;
+      printer.setPrinterName("desired printer name");
+      QPrintDialog dialog(&printer,this);
+      if (dialog.exec() == QDialog::Rejected) return ;
+      ui->tabContrat->render(&printer);
 }
