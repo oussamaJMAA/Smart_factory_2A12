@@ -71,12 +71,13 @@ bool materiaux::supprimer(QString ref_materiel){
 bool materiaux::modifier(QString ref_materiel){
 
     QSqlQuery query ;
-    query.prepare("update materiaux set nom_materiel= :nom_materiel , quantite= :quantite , quantite_res = :quantite_res , prix= :prix where ref_materiel= :ref_materiel");
+    query.prepare("update materiaux set nom_materiel= :nom_materiel , quantite= :quantite , quantite_res = :quantite_res , prix= :prix,date_achat= :date_achat where ref_materiel= :ref_materiel");
     query.bindValue(":nom_materiel",nom_materiel);
     query.bindValue(":quantite",quantite);
     query.bindValue(":quantite_res",quantite_res);
     query.bindValue(":prix",prix);
      query.bindValue(":ref_materiel",ref_materiel);
+       query.bindValue(":date_achat",date_achat);
     return query.exec();
 
 }
@@ -85,34 +86,43 @@ QSqlQueryModel *materiaux::trier(){
 
 
     QSqlQueryModel * model =new QSqlQueryModel();
-    model->setQuery("select * from materiaux order by ref_materiel");
+    model->setQuery("select * from materiaux order by date_achat,nom_materiel,quantite");
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("ref_materiel"));
     model->setHeaderData(1,Qt::Horizontal,QObject::tr("nom_materiel"));
     model->setHeaderData(2,Qt::Horizontal,QObject::tr("quantite"));
     model->setHeaderData(3,Qt::Horizontal,QObject::tr("prix"));
     model->setHeaderData(4,Qt::Horizontal,QObject::tr("quantite_res"));
+    model->setHeaderData(5,Qt::Horizontal,QObject::tr("date_achat"));
 
 return model;
 }
 
 
-QSqlQueryModel *materiaux ::rechercher (){
-
+QSqlQueryModel* materiaux ::rechercher (QString s){
 
     QSqlQueryModel * model =new QSqlQueryModel();
 
-   QSqlQuery query ;
-    query.bindValue(":ref_materiel",ref_materiel);
-       model->setQuery("select nom_materiel,quantite,prix from materiaux where ref_materiel=  :ref_materiel");
-       model->setHeaderData(0,Qt::Horizontal,QObject::tr("ref_materiel"));
-       model->setHeaderData(1,Qt::Horizontal,QObject::tr("nom_materiel"));
-       model->setHeaderData(2,Qt::Horizontal,QObject::tr("quantite"));
-       model->setHeaderData(3,Qt::Horizontal,QObject::tr("prix"));
-       model->setHeaderData(4,Qt::Horizontal,QObject::tr("quantite_res"));
-    return model;
+   model->setQuery("select * from materiaux where ref_materiel like  '%'||'"+s+"'||'%' or nom_materiel like '%'||'"+s+"'||'%'  or quantite like '%'||'"+s+"'||'%'");
+   model->setHeaderData(0,Qt::Horizontal,QObject::tr("ref_materiel"));
+
+   model->setHeaderData(1,Qt::Horizontal,QObject::tr("nom_materiel"));
+   model->setHeaderData(2,Qt::Horizontal,QObject::tr("quantite"));
+   model->setHeaderData(3,Qt::Horizontal,QObject::tr("prix"));
+   model->setHeaderData(4,Qt::Horizontal,QObject::tr("quantite_res"));
+   model->setHeaderData(5,Qt::Horizontal,QObject::tr("date_achat"));
+
+   return model;
 
 
 }
+QSqlQueryModel * materiaux::stat()
+{ QSqlQueryModel * model =new QSqlQueryModel();
+model->setQuery("select avg(quantite_res) from materiaux");
 
+model->setHeaderData(0,Qt::Horizontal,QObject::tr("Quantite Restante"));
+
+return model;
+
+}
 
 

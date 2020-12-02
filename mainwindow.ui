@@ -45,10 +45,10 @@
       <widget class="QTabWidget" name="tabWidget">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>-10</x>
          <y>70</y>
-         <width>1121</width>
-         <height>621</height>
+         <width>1131</width>
+         <height>611</height>
         </rect>
        </property>
        <property name="currentIndex">
@@ -75,10 +75,21 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">/*background-color:#C70039;
+color:white;*/
+QPushButton
+{
+background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(22, 85,110, 255), stop:1 rgba(95, 196, 208, 255));
+border-radius:15px;
+color:white;
+}
+QPushButton:hover
+{
+background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(95, 196, 208, 255), stop:1 rgba(22, 85,110, 255))
+}</string>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>5</number>
          </property>
          <widget class="QWidget" name="page">
           <widget class="QFrame" name="frame_3">
@@ -117,13 +128,18 @@ background-color: rgb(170, 255, 127);</string>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">border: 2px solid gray;
-border-radius: 10px;
-padding : 0 8px;
-background:yellow;
-
-/*QPushButton:hover:!pressed { color: rgb(255, 170, 0); }*/
-</string>
+             <string notr="true">/*background-color:#C70039;
+color:white;*/
+QPushButton
+{
+background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(22, 85,110, 255), stop:1 rgba(95, 196, 208, 255));
+border-radius:15px;
+color:white;
+}
+QPushButton:hover
+{
+background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(95, 196, 208, 255), stop:1 rgba(22, 85,110, 255))
+}</string>
             </property>
             <property name="text">
              <string>Ajouter un materiel</string>
@@ -146,13 +162,18 @@ background:yellow;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">border: 2px solid gray;
-border-radius: 10px;
-padding : 0 8px;
-background:yellow;
-
-/*QPushButton:hover:!pressed { color: rgb(255, 170, 0); }*/
-</string>
+             <string notr="true">/*background-color:#C70039;
+color:white;*/
+QPushButton
+{
+background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(22, 85,110, 255), stop:1 rgba(95, 196, 208, 255));
+border-radius:15px;
+color:white;
+}
+QPushButton:hover
+{
+background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(95, 196, 208, 255), stop:1 rgba(22, 85,110, 255))
+}</string>
             </property>
             <property name="text">
              <string>Afficher un materiel</string>
@@ -175,13 +196,18 @@ background:yellow;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">border: 2px solid gray;
-border-radius: 10px;
-padding : 0 8px;
-background:yellow;
-
-/*QPushButton:hover:!pressed { color: rgb(255, 170, 0); }*/
-</string>
+             <string notr="true">/*background-color:#C70039;
+color:white;*/
+QPushButton
+{
+background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(22, 85,110, 255), stop:1 rgba(95, 196, 208, 255));
+border-radius:15px;
+color:white;
+}
+QPushButton:hover
+{
+background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(95, 196, 208, 255), stop:1 rgba(22, 85,110, 255))
+}</string>
             </property>
             <property name="text">
              <string>Quitter</string>
@@ -204,12 +230,18 @@ background:yellow;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">border: 2px solid gray;
-border-radius: 10px;
-padding : 0 8px;
-background:yellow;
-
-/*QPushButton:hover:!pressed { color: rgb(255, 170, 0); }*/
+             <string notr="true">/*background-color:#C70039;
+color:white;*/
+QPushButton
+{
+background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(22, 85,110, 255), stop:1 rgba(95, 196, 208, 255));
+border-radius:15px;
+color:white;
+}
+QPushButton:hover
+{
+background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(95, 196, 208, 255), stop:1 rgba(22, 85,110, 255))
+}
 </string>
             </property>
             <property name="text">
@@ -303,8 +335,8 @@ background:yellow;
           <widget class="QLabel" name="label_25">
            <property name="geometry">
             <rect>
-             <x>351</x>
-             <y>227</y>
+             <x>330</x>
+             <y>260</y>
              <width>111</width>
              <height>21</height>
             </rect>
@@ -336,14 +368,14 @@ background:yellow;
           <widget class="QLabel" name="label_26">
            <property name="geometry">
             <rect>
-             <x>321</x>
-             <y>260</y>
-             <width>141</width>
+             <x>290</x>
+             <y>230</y>
+             <width>181</width>
              <height>21</height>
             </rect>
            </property>
            <property name="text">
-            <string>Quantite_dispo</string>
+            <string>Quantite_restante</string>
            </property>
           </widget>
           <widget class="QLabel" name="label_27">
@@ -488,8 +520,8 @@ background:yellow;
           <widget class="QPushButton" name="supprimer_2">
            <property name="geometry">
             <rect>
-             <x>449</x>
-             <y>461</y>
+             <x>549</x>
+             <y>462</y>
              <width>99</width>
              <height>30</height>
             </rect>
@@ -508,8 +540,8 @@ background:yellow;
           <widget class="QPushButton" name="quitter_2">
            <property name="geometry">
             <rect>
-             <x>250</x>
-             <y>500</y>
+             <x>450</x>
+             <y>462</y>
              <width>93</width>
              <height>30</height>
             </rect>
@@ -528,8 +560,8 @@ background:yellow;
           <widget class="QPushButton" name="modifier_2">
            <property name="geometry">
             <rect>
-             <x>251</x>
-             <y>461</y>
+             <x>252</x>
+             <y>462</y>
              <width>93</width>
              <height>30</height>
             </rect>
@@ -548,8 +580,8 @@ background:yellow;
           <widget class="QPushButton" name="supprimer_4">
            <property name="geometry">
             <rect>
-             <x>350</x>
-             <y>461</y>
+             <x>351</x>
+             <y>462</y>
              <width>93</width>
              <height>30</height>
             </rect>
@@ -565,26 +597,6 @@ background:yellow;
             <string>Trier</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="supprimer_5">
-           <property name="geometry">
-            <rect>
-             <x>554</x>
-             <y>461</y>
-             <width>106</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>Rechercher</string>
-           </property>
-          </widget>
           <widget class="QTableView" name="tableView">
            <property name="geometry">
             <rect>
@@ -598,21 +610,14 @@ background:yellow;
           <widget class="QLineEdit" name="rechercher_ref">
            <property name="geometry">
             <rect>
-             <x>670</x>
-             <y>470</y>
-             <width>113</width>
-             <height>22</height>
+             <x>710</x>
+             <y>464</y>
+             <width>205</width>
+             <height>27</height>
             </rect>
            </property>
-          </widget>
-          <widget class="QLineEdit" name="lineEdit">
-           <property name="geometry">
-            <rect>
-             <x>820</x>
-             <y>471</y>
-             <width>141</width>
-             <height>21</height>
-            </rect>
+           <property name="placeholderText">
+            <string>Rechercher materiel</string>
            </property>
           </widget>
          </widget>
@@ -705,8 +710,8 @@ background:yellow;
           <widget class="QLabel" name="label_17">
            <property name="geometry">
             <rect>
-             <x>320</x>
-             <y>280</y>
+             <x>330</x>
+             <y>310</y>
              <width>112</width>
              <height>21</height>
             </rect>
@@ -758,7 +763,7 @@ background:yellow;
            <property name="geometry">
             <rect>
              <x>310</x>
-             <y>310</y>
+             <y>280</y>
              <width>131</width>
              <height>21</height>
             </rect>
@@ -824,9 +829,19 @@ background:yellow;
             <rect>
              <x>500</x>
              <y>350</y>
-             <width>110</width>
+             <width>151</width>
              <height>22</height>
             </rect>
+           </property>
+           <property name="dateTime">
+            <datetime>
+             <hour>19</hour>
+             <minute>30</minute>
+             <second>0</second>
+             <year>2020</year>
+             <month>1</month>
+             <day>14</day>
+            </datetime>
            </property>
            <property name="maximumDateTime">
             <datetime>
@@ -931,16 +946,6 @@ background:yellow;
             <string>Statistique</string>
            </property>
           </widget>
-          <widget class="QGraphicsView" name="graphicsView">
-           <property name="geometry">
-            <rect>
-             <x>40</x>
-             <y>100</y>
-             <width>971</width>
-             <height>381</height>
-            </rect>
-           </property>
-          </widget>
           <widget class="QPushButton" name="retour">
            <property name="geometry">
             <rect>
@@ -952,6 +957,16 @@ background:yellow;
            </property>
            <property name="text">
             <string>Retour</string>
+           </property>
+          </widget>
+          <widget class="QTableView" name="tableView_3">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>90</y>
+             <width>981</width>
+             <height>391</height>
+            </rect>
            </property>
           </widget>
          </widget>
@@ -977,8 +992,22 @@ background:yellow;
            <bold>true</bold>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">/*background-color:#C70039;
+color:white;*/
+QPushButton
+{
+background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(22, 85,110, 255), stop:1 rgba(95, 196, 208, 255));
+border-radius:15px;
+color:white;
+}
+QPushButton:hover
+{
+background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(95, 196, 208, 255), stop:1 rgba(22, 85,110, 255))
+}</string>
+         </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="page_3">
           <widget class="QFrame" name="frame_4">
@@ -1021,13 +1050,13 @@ background-color: rgb(170, 255, 127);</string>
 color:white;*/
 QPushButton
 {
-background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(119, 0, 0, 255), stop:1 rgba(255, 128, 192, 255));
+background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(22, 85,110, 255), stop:1 rgba(95, 196, 208, 255));
 border-radius:15px;
 color:white;
 }
 QPushButton:hover
 {
-background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(119, 0, 153, 255), stop:1 rgba(98, 234, 255, 255))
+background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(95, 196, 208, 255), stop:1 rgba(22, 85,110, 255))
 }</string>
             </property>
             <property name="text">
@@ -1051,12 +1080,18 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">border: 2px solid gray;
-border-radius: 10px;
-padding : 0 8px;
-background:yellow;
-
-/*QPushButton:hover:!pressed { color: rgb(255, 170, 0); }*/
+             <string notr="true">/*background-color:#C70039;
+color:white;*/
+QPushButton
+{
+background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(22, 85,110, 255), stop:1 rgba(95, 196, 208, 255));
+border-radius:15px;
+color:white;
+}
+QPushButton:hover
+{
+background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(95, 196, 208, 255), stop:1 rgba(22, 85,110, 255))
+}
 </string>
             </property>
             <property name="text">
@@ -1080,32 +1115,21 @@ background:yellow;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">border: 2px solid gray;
-border-radius: 10px;
-padding : 0 8px;
-background:yellow;
-
-/*QPushButton:hover:!pressed { color: rgb(255, 170, 0); }*/
-</string>
+             <string notr="true">/*background-color:#C70039;
+color:white;*/
+QPushButton
+{
+background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(22, 85,110, 255), stop:1 rgba(95, 196, 208, 255));
+border-radius:15px;
+color:white;
+}
+QPushButton:hover
+{
+background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(95, 196, 208, 255), stop:1 rgba(22, 85,110, 255))
+}</string>
             </property>
             <property name="text">
              <string>Quitter</string>
-            </property>
-           </widget>
-           <widget class="QCommandLinkButton" name="commandLinkButton">
-            <property name="geometry">
-             <rect>
-              <x>50</x>
-              <y>390</y>
-              <width>221</width>
-              <height>51</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color:yellow;</string>
-            </property>
-            <property name="text">
-             <string>Envoyer Mail</string>
             </property>
            </widget>
           </widget>
@@ -1159,10 +1183,10 @@ background:yellow;
           <widget class="QLabel" name="label_29">
            <property name="geometry">
             <rect>
-             <x>278</x>
-             <y>240</y>
-             <width>129</width>
-             <height>21</height>
+             <x>271</x>
+             <y>237</y>
+             <width>231</width>
+             <height>20</height>
             </rect>
            </property>
            <property name="text">
@@ -1172,19 +1196,19 @@ background:yellow;
           <widget class="QLineEdit" name="lineEdit_20">
            <property name="geometry">
             <rect>
-             <x>460</x>
-             <y>240</y>
-             <width>205</width>
-             <height>27</height>
+             <x>461</x>
+             <y>241</y>
+             <width>137</width>
+             <height>22</height>
             </rect>
            </property>
           </widget>
           <widget class="QLabel" name="label_30">
            <property name="geometry">
             <rect>
-             <x>278</x>
-             <y>372</y>
-             <width>134</width>
+             <x>271</x>
+             <y>352</y>
+             <width>181</width>
              <height>21</height>
             </rect>
            </property>
@@ -1195,10 +1219,10 @@ background:yellow;
           <widget class="QLabel" name="label_31">
            <property name="geometry">
             <rect>
-             <x>278</x>
-             <y>273</y>
-             <width>148</width>
-             <height>21</height>
+             <x>271</x>
+             <y>259</y>
+             <width>161</width>
+             <height>31</height>
             </rect>
            </property>
            <property name="text">
@@ -1208,20 +1232,20 @@ background:yellow;
           <widget class="QLineEdit" name="lineEdit_21">
            <property name="geometry">
             <rect>
-             <x>460</x>
-             <y>339</y>
-             <width>205</width>
-             <height>27</height>
+             <x>461</x>
+             <y>325</y>
+             <width>137</width>
+             <height>22</height>
             </rect>
            </property>
           </widget>
           <widget class="QLineEdit" name="lineEdit_22">
            <property name="geometry">
             <rect>
-             <x>460</x>
-             <y>372</y>
-             <width>205</width>
-             <height>27</height>
+             <x>461</x>
+             <y>353</y>
+             <width>137</width>
+             <height>22</height>
             </rect>
            </property>
           </widget>
@@ -1257,10 +1281,10 @@ background:yellow;
           <widget class="QLabel" name="label_32">
            <property name="geometry">
             <rect>
-             <x>278</x>
-             <y>405</y>
-             <width>176</width>
-             <height>21</height>
+             <x>271</x>
+             <y>380</y>
+             <width>221</width>
+             <height>16</height>
             </rect>
            </property>
            <property name="text">
@@ -1270,9 +1294,9 @@ background:yellow;
           <widget class="QLabel" name="label_33">
            <property name="geometry">
             <rect>
-             <x>278</x>
-             <y>339</y>
-             <width>144</width>
+             <x>271</x>
+             <y>325</y>
+             <width>181</width>
              <height>21</height>
             </rect>
            </property>
@@ -1299,20 +1323,20 @@ background:yellow;
           <widget class="QLineEdit" name="lineEdit_23">
            <property name="geometry">
             <rect>
-             <x>460</x>
-             <y>306</y>
-             <width>205</width>
-             <height>27</height>
+             <x>461</x>
+             <y>297</y>
+             <width>137</width>
+             <height>22</height>
             </rect>
            </property>
           </widget>
           <widget class="QLineEdit" name="lineEdit_24">
            <property name="geometry">
             <rect>
-             <x>460</x>
-             <y>273</y>
-             <width>205</width>
-             <height>27</height>
+             <x>461</x>
+             <y>269</y>
+             <width>137</width>
+             <height>22</height>
             </rect>
            </property>
           </widget>
@@ -1332,10 +1356,10 @@ background:yellow;
           <widget class="QLabel" name="label_35">
            <property name="geometry">
             <rect>
-             <x>278</x>
-             <y>306</y>
-             <width>111</width>
-             <height>21</height>
+             <x>250</x>
+             <y>300</y>
+             <width>181</width>
+             <height>16</height>
             </rect>
            </property>
            <property name="text">
@@ -1345,30 +1369,30 @@ background:yellow;
           <widget class="QLineEdit" name="lineEdit_25">
            <property name="geometry">
             <rect>
-             <x>460</x>
-             <y>405</y>
-             <width>205</width>
-             <height>27</height>
+             <x>461</x>
+             <y>381</y>
+             <width>137</width>
+             <height>22</height>
             </rect>
            </property>
           </widget>
           <widget class="QLineEdit" name="lineEdit_28">
            <property name="geometry">
             <rect>
-             <x>460</x>
-             <y>450</y>
-             <width>205</width>
-             <height>27</height>
+             <x>461</x>
+             <y>409</y>
+             <width>137</width>
+             <height>22</height>
             </rect>
            </property>
           </widget>
           <widget class="QLabel" name="label_36">
            <property name="geometry">
             <rect>
-             <x>270</x>
-             <y>450</y>
-             <width>176</width>
-             <height>21</height>
+             <x>280</x>
+             <y>400</y>
+             <width>181</width>
+             <height>31</height>
             </rect>
            </property>
            <property name="text">
@@ -1387,87 +1411,110 @@ background:yellow;
             </rect>
            </property>
           </widget>
-          <widget class="QWidget" name="layoutWidget">
+          <widget class="QLineEdit" name="rechercher_id">
            <property name="geometry">
             <rect>
-             <x>300</x>
-             <y>480</y>
-             <width>510</width>
-             <height>32</height>
+             <x>640</x>
+             <y>470</y>
+             <width>231</width>
+             <height>31</height>
             </rect>
            </property>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <widget class="QPushButton" name="modifier_3">
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Modifier</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="trier">
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Trier</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="supprimer_3">
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Supprimer</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="rechercher">
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Rechercher</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="quitter_3">
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Retour</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <property name="placeholderText">
+            <string>Rechercher fournisseur</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="trier">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>471</y>
+             <width>93</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Trier</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="modifier_3">
+           <property name="geometry">
+            <rect>
+             <x>191</x>
+             <y>471</y>
+             <width>93</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Modifier</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="supprimer_3">
+           <property name="geometry">
+            <rect>
+             <x>389</x>
+             <y>471</y>
+             <width>99</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Supprimer</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="quitter_3">
+           <property name="geometry">
+            <rect>
+             <x>500</x>
+             <y>470</y>
+             <width>93</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Retour</string>
+           </property>
           </widget>
          </widget>
          <widget class="QWidget" name="page_13">

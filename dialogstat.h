@@ -1,5 +1,5 @@
-#ifndef DIALOG_H
-#define DIALOG_H
+#ifndef DIALOGSTAT_H
+#define DIALOGSTAT_H
 
 #include <QDialog>
 #include <QtWidgets/QApplication>
@@ -7,21 +7,20 @@
 #include <QtWidgets/QStatusBar>
 #include <QtCharts/QChartView>
 #include "donutbreakdownchart.h"
-QT_CHARTS_USE_NAMESPACE
 namespace Ui {
-class Dialog;
+class Dialogstat;
 }
 
-class Dialog : public QDialog
+class Dialogstat : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit Dialog(QWidget *parent = nullptr);
-    ~Dialog();
+    explicit Dialogstat(QWidget *parent = nullptr);
+    ~Dialogstat();
 
 private:
-    Ui::Dialog *ui;
+    Ui::Dialogstat *ui;
 };
 
-#endif // DIALOG_H
+#endif // DIALOGSTAT_H

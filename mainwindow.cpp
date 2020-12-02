@@ -4,6 +4,9 @@
 #include <QDebug>
 #include <materiaux.h>
 #include <fournisseurs.h>
+#include <QApplication>
+#include "dialog.h"
+QT_CHARTS_USE_NAMESPACE
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -19,7 +22,7 @@ ui->stackedWidget_2->setCurrentIndex(0); // intialiser le deuxieme widget(fourni
     ui->stackedWidget->setCurrentIndex(0);// initialiser le premier widget(materiaux)
     //controle de saisie pour les nombres
 ui->lineEdit_20->setValidator(new QIntValidator(0,99999,this));//id_fournisseur
-ui->lineEdit_23->setValidator(new QIntValidator(0,99999,this));//ref_materiel
+//ui->lineEdit_23->setValidator(new QIntValidator(0,99999,this));//ref_materiel
 ui->lineEdit_22->setValidator(new QIntValidator(0,99999999,this));//numero tel(8 chiffres)
 
 ui->lineEdit_29->setValidator(new QIntValidator(0,99999,this));//remise materiel
@@ -47,7 +50,7 @@ ui->lineEdit_19->setValidator(new QIntValidator(0,9999,this));//quantite
     //curve.setAmplitude(2.00);
     curve.setOvershoot(1.30);
     curve.setPeriod(0.50);
-    animation->setLoopCount(3);
+    animation->setLoopCount(-1);
 
     animation->start();
  //animation pour logo sofap
@@ -338,7 +341,11 @@ void MainWindow::on_pushButton_4_clicked()//"editer statistique
 { QMediaPlayer *musicLogin= new QMediaPlayer;
     musicLogin->setMedia(QUrl("C:/Users/oussa/Desktop/bouttonsound.mp3"));
         musicLogin->play();
-      ui->stackedWidget->setCurrentIndex(5);
+   ui->stackedWidget->setCurrentIndex(5);
+
+ ui->tableView_3->setModel(Etmp.stat());
+
+ //ui->tableView_3->setModel(Etmp.stat_2());
 }
 
 
@@ -447,35 +454,30 @@ void MainWindow::on_trier_clicked() // trier fournisseur
 }
 
 
-void MainWindow::on_supprimer_5_clicked() { // rechercher materiel
-
-QString rech=ui->rechercher_ref->text();
-    QSqlQuery query;
-    query.prepare(" select * from materiaux where ref_materiel = '"+rech+"'");
-    if(query.exec())
-    {
-        while (query.next())
-        {
-
-            ui->lineEdit->setText(query.value(1).toString());
-
-   }
-}
 
 
-
-}
-
-
-/*void MainWindow::on_tableView_2_activated(const QModelIndex &index)
+void MainWindow::on_tableView_2_activated(const QModelIndex &index)
 {
-     int id_fournisseur = ui->tableView_2->model()->data(index).toInt();
+
+
+
+     QString id = ui->tableView_2->model()->data(index).toString();
      QSqlQuery query;
-     query.prepare(" delete * from fournisseur where id_fournisseur = :id_fournisseur");
-   query.bindValue(":id_fournisseur",id_fournisseur);
-     ui->tableView_2->setStyleSheet("QTableView { selection-color: black; selection-background-color: green; }");
+     query.prepare(" select * from fournisseur  where id_fournisseur = '"+id+"'");
+
+   //  ui->tableView_2->setStyleSheet("QTableView { selection-color: black; selection-background-color: green; }");
+     if(query.exec())
+     {
+         while (query.next())
+         {
+ ui->lineEdit_29->setText(query.value(0).toString());
+             ui->lineEdit_26->setText(query.value(1).toString());
+
+
+         }
 }
-*/
+}
+
 void MainWindow::on_tableView_activated(const QModelIndex &index)
 {
     QString ref_materiel = ui->tableView->model()->data(index).toString();
@@ -485,13 +487,93 @@ void MainWindow::on_tableView_activated(const QModelIndex &index)
     {
         while (query.next())
         {
-
-            ui->lineEdit_12->setText(query.value(1).toString());
+ui->lineEdit_31->setText(query.value(0).toString());
+         ui->lineEdit_12->setText(query.value(1).toString());
             ui->lineEdit_10->setText(query.value(2).toString());
             ui->lineEdit_11->setText(query.value(3).toString());
             ui->lineEdit_13->setText(query.value(4).toString());
+            ui->date_modifier->setDate(query.value(5).toDate());
 
 
         }
 }
+
+}
+
+
+
+void MainWindow::on_rechercher_ref_cursorPositionChanged()
+{
+    materiaux m;
+    ui->tableView->setModel(m.rechercher(ui->rechercher_ref->text()));
+    m.afficher();
+}
+
+void MainWindow::on_rechercher_id_cursorPositionChanged()
+{
+    fournisseurs f ;
+    ui->tableView_2->setModel(f.rechercher1(ui->rechercher_id->text()));
+            f.afficher_fournisseur();
+}
+
+
+void MainWindow::on_tableView_3_activated(const QModelIndex &index)
+{
+int x = ui->tableView_3->model()->data(index).toInt();
+//int y = ui->tableView_3->SelectedClicked;
+    Dialog d;
+
+    //QApplication a(int argc,char *argv[]);
+    QPieSeries *series1 = new QPieSeries();
+   // series1->setName("Materiaux Restante");
+    series1->append("Quantite Materiaux",144);
+
+  /*  QPieSeries *series2 = new QPieSeries();
+   // series2->setName("Renewables");
+    series2->append("quantite", 144);*/
+
+    QPieSeries *series3 = new QPieSeries();
+   // series3->setName("Others");
+    series3->append("quantite restante",x );
+
+    DonutBreakdownChart *donutBreakdown = new DonutBreakdownChart();
+    donutBreakdown->setAnimationOptions(QChart::AllAnimations);
+    donutBreakdown->setTitle("Materiaux");
+    donutBreakdown->legend()->setAlignment(Qt::AlignRight);
+   donutBreakdown->addBreakdownSeries(series1, Qt::red);
+   // donutBreakdown->addBreakdownSeries(series2, Qt::darkGreen);
+    donutBreakdown->addBreakdownSeries(series3, Qt::darkBlue);
+    //![2]
+
+    //![3]
+    QMainWindow window;
+    QChartView *chartView = new QChartView(donutBreakdown);
+    chartView->setRenderHint(QPainter::Antialiasing);
+    window.setCentralWidget(chartView);
+    window.resize(800, 500);
+    window.show();
+    d.exec();
+}
+
+void MainWindow::on_pushButton_23_clicked() // undo fournisseur (ajouter  )
+{
+    ui->lineEdit_20->setText("");
+    ui->lineEdit_21->setText("");
+    ui->lineEdit_22->setText("");
+    ui->lineEdit_23->setText("");
+    ui->lineEdit_24->setText("");
+    ui->lineEdit_25->setText("");
+     ui->lineEdit_28->setText("");
+
+}
+
+void MainWindow::on_pushButton_27_clicked() // undo fournisseur (modifier)
+{
+    ui->lineEdit_29->setText("");
+    ui->lineEdit_26->setText("");
+}
+
+void MainWindow::on_pushButton_30_clicked() // undo fournisseur (supprimer)
+{
+    ui->lineEdit_27->setText("");
 }

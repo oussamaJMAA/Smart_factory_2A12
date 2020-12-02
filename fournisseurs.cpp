@@ -95,7 +95,7 @@ QSqlQueryModel *fournisseurs::trier1(){
 
 
     QSqlQueryModel * model =new QSqlQueryModel();
-    model->setQuery("select * from fournisseur order by solde");
+    model->setQuery("select * from fournisseur order by solde,nom_fournisseur,nommateriel");
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("reference_materiel"));
     model->setHeaderData(1,Qt::Horizontal,QObject::tr("ID_fournisseur"));
     model->setHeaderData(2,Qt::Horizontal,QObject::tr("nommateriel"));
@@ -106,5 +106,23 @@ QSqlQueryModel *fournisseurs::trier1(){
 
 return model;
 }
+QSqlQueryModel *fournisseurs ::rechercher1 (QString s){
 
+
+    QSqlQueryModel * model =new QSqlQueryModel();
+
+
+       model->setQuery("select * from fournisseur where ID_fournisseur like  '%'||'"+s+"'||'%' or nommateriel like '%'||'"+s+"'||'%'  or tel_founrisseur like '%'||'"+s+"'||'%' or nom_fournisseur like  '%'||'"+s+"'||'%' ");
+       model->setHeaderData(0,Qt::Horizontal,QObject::tr("reference_materiel"));
+       model->setHeaderData(1,Qt::Horizontal,QObject::tr("ID_fournisseur"));
+       model->setHeaderData(2,Qt::Horizontal,QObject::tr("nommateriel"));
+       model->setHeaderData(3,Qt::Horizontal,QObject::tr("nom_fournisseur"));
+       model->setHeaderData(4,Qt::Horizontal,QObject::tr("mail_fournisseur"));
+       model->setHeaderData(5,Qt::Horizontal,QObject::tr("tel_founrisseur"));
+       model->setHeaderData(6,Qt::Horizontal,QObject::tr("solde"));
+    return model;
+
+
+
+}
 

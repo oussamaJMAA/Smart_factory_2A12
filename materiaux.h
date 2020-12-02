@@ -30,7 +30,9 @@ bool modifier (QString);
 
 QSqlQueryModel * trier();
 
-QSqlQueryModel *rechercher();
+QSqlQueryModel* rechercher(QString);
+QSqlQueryModel* stat ();
+QSqlQueryModel* stat_2();
 };
 
 #endif // MATERIAUX_H

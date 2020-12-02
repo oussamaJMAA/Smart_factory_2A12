@@ -1,39 +1,13 @@
-#include "mainwindow.h"
-#include <QMessageBox>
-#include "connexion.h"
-#include <QApplication>
+#include "dialogstat.h"
+#include "ui_dialogstat.h"
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QMainWindow>
-#include <QtWidgets/QStatusBar>
-#include <QtCharts/QChartView>
-#include "donutbreakdownchart.h"
-
-QT_CHARTS_USE_NAMESPACE
-
-
-int main(int argc, char *argv[])
+Dialogstat::Dialogstat(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::Dialogstat)
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    connexion c;
-    bool test=c.ouvrirconnexion();
 
-    if (test){
-
-
-    w.show();
-    QMessageBox::information(nullptr,QObject::tr("database is open"),
-                             QObject::tr("connection succesful \n"
-                                         "click cancel to exit"),QMessageBox::Cancel);
-    }
-    else{
-        QMessageBox::critical(nullptr,QObject::tr("database is not open"),
-                              QObject::tr("connection failed"),QMessageBox::Cancel);
-
-}
-
-
-/*
+    ui->setupUi(this);
+   // QApplication a(int argc, char *argv[]);
     QPieSeries *series1 = new QPieSeries();
     series1->setName("Fossil fuels");
     series1->append("Oil", 353295);
@@ -65,7 +39,7 @@ int main(int argc, char *argv[])
     //![2]
 
     //![3]
-    QMainWindow window;
+  QMainWindow window;
     QChartView *chartView = new QChartView(donutBreakdown);
     chartView->setRenderHint(QPainter::Antialiasing);
     window.setCentralWidget(chartView);
@@ -73,6 +47,9 @@ int main(int argc, char *argv[])
     window.show();
     //![3]
 
-*/
-    return a.exec();
+}
+
+Dialogstat::~Dialogstat()
+{
+    delete ui;
 }

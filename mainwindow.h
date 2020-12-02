@@ -9,6 +9,12 @@
 #include <QDebug>
 #include <materiaux.h>
 #include <fournisseurs.h>
+
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QStatusBar>
+#include <QtCharts/QChartView>
+#include "donutbreakdownchart.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -92,11 +98,29 @@ private slots:
     void on_trier_clicked();
 
 
-    void on_supprimer_5_clicked();
 
-   // void on_tableView_2_activated(const QModelIndex &index);
+
+    void on_tableView_2_activated(const QModelIndex &index);
 
     void on_tableView_activated(const QModelIndex &index);
+
+
+
+ //   void on_rechercher_ref_textEdited(const QString &arg1);
+
+    void on_rechercher_ref_cursorPositionChanged();
+
+    void on_rechercher_id_cursorPositionChanged();
+
+
+
+    void on_tableView_3_activated(const QModelIndex &index);
+
+    void on_pushButton_23_clicked();
+
+    void on_pushButton_27_clicked();
+
+    void on_pushButton_30_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -35,6 +35,7 @@ QString getnom_materiel();
      bool supprimer_fournisseur(int);
      bool modifier_fournisseur(QString ,QString);
      QSqlQueryModel * trier1();
+     QSqlQueryModel * rechercher1(QString);
 };
 
 #endif // FOURNISSEURS_H
