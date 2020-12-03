@@ -1,13 +1,9 @@
 #ifndef DIALOG_H
 #define DIALOG_H
+#include "dechet.h"
 
 #include <QDialog>
-#include <QtWidgets/QApplication>
-#include <QtWidgets/QMainWindow>
-#include <QtWidgets/QStatusBar>
-#include <QtCharts/QChartView>
-#include "donutbreakdownchart.h"
-QT_CHARTS_USE_NAMESPACE
+
 namespace Ui {
 class Dialog;
 }
@@ -18,6 +14,7 @@ class Dialog : public QDialog
 
 public:
     explicit Dialog(QWidget *parent = nullptr);
+    void setdechet(Dechet d);
     ~Dialog();
 
 private:
