@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/photos">
+        <file>IMG/image.png</file>
+        <file>IMG/sopal.png</file>
+        <file>icon.ico</file>
+    </qresource>
+    <qresource prefix="/sound">
+        <file>applepay.mp3</file>
+        <file>bouttonsound.mp3</file>
+    </qresource>
+</RCC>

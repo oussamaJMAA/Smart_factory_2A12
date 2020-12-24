@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 ui->stackedWidget_2->setCurrentIndex(0); // intialiser le deuxieme widget(fournisseur)
   ui->stackedWidget->setCurrentIndex(0);// initialiser le premier widget(materiaux)
+  ui->pushButton_6->setVisible(false);
     //controle de saisie pour les nombres
 ui->lineEdit_20->setValidator(new QIntValidator(0,99999999,this));//id_fournisseur
 //ui->lineEdit_23->setValidator(new QIntValidator(0,99999,this));//ref_materiel
@@ -572,4 +573,27 @@ void MainWindow::on_pushButton_27_clicked() // undo fournisseur (modifier)
 void MainWindow::on_pushButton_30_clicked() // undo fournisseur (supprimer)
 {
     ui->lineEdit_27->setText("");
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    ui->tabWidget->setStyleSheet("background-color:black;color:white");
+    ui->frame_2->setStyleSheet("background-color:qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgb(0,0,0), stop:1 rgba(0,255,0)) ");
+    ui->frame_3->setStyleSheet("background-color:qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgb(0,0,0), stop:1 rgba(34,139,34)) ");
+    ui->frame_4->setStyleSheet("background-color:qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgb(0,0,0), stop:1 rgba(34,139,34)) ");
+
+ui->pushButton_5->setVisible(false);
+ui->pushButton_6->setVisible(true);
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+
+    ui->tabWidget->setStyleSheet("background-color:white;color:black");
+    ui->frame_2->setStyleSheet("background-color:qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgb(0,0,0), stop:1 rgba(0,255,0)) ");
+    ui->frame_3->setStyleSheet("background-color:qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgb(0,0,0), stop:1 rgba(34,139,34)) ");
+    ui->frame_4->setStyleSheet("background-color:qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgb(0,0,0), stop:1 rgba(34,139,34))");
+
+ ui->pushButton_5->setVisible(true);
+ ui->pushButton_6->setVisible(false);
 }
