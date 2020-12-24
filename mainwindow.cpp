@@ -575,7 +575,7 @@ void MainWindow::on_pushButton_30_clicked() // undo fournisseur (supprimer)
     ui->lineEdit_27->setText("");
 }
 
-void MainWindow::on_pushButton_5_clicked()
+void MainWindow::on_pushButton_5_clicked() // dark theme
 {
     ui->tabWidget->setStyleSheet("background-color:black;color:white");
     ui->frame_2->setStyleSheet("background-color:qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgb(0,0,0), stop:1 rgba(0,255,0)) ");
@@ -586,7 +586,7 @@ ui->pushButton_5->setVisible(false);
 ui->pushButton_6->setVisible(true);
 }
 
-void MainWindow::on_pushButton_6_clicked()
+void MainWindow::on_pushButton_6_clicked() // dark theme
 {
 
     ui->tabWidget->setStyleSheet("background-color:white;color:black");
