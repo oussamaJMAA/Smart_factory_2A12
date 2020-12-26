@@ -543,7 +543,7 @@ void acceuil::on_pushButton_2_clicked() // boutton afficher materiaux
     QMediaPlayer *musicLogin= new QMediaPlayer;
    musicLogin->setMedia(QUrl("C:/Users/oussa/Desktop/bouttonsound.mp3"));
        musicLogin->play();
-ui->tableView->setModel(Etmp.afficher());
+ui->affiche_mat->setModel(Etmp.afficher());
 //ui->comboBox->setModel(Etmp.afficher());
 //ui->lineEdit_10
 }
@@ -612,7 +612,7 @@ QDate date_achat= ui->date->date();
                    materiaux m(ref_materiel,nom_materiel,prix,quantite,quantite_res,date_achat);
                    bool test=m.ajouter();
                    if (test){
-                      ui->tableView->setModel(Etmp.afficher());
+                      ui->affiche_mat->setModel(Etmp.afficher());
 
                        QMessageBox::information(nullptr,QObject::tr("OK"),
                                                 QObject::tr("Ajouter Effectuer\n"
@@ -655,7 +655,7 @@ void acceuil::on_pushButton_12_clicked() //boutton modifier (dans le widget modi
            materiaux m(ref_materiel,nom_materiel,prix,quantite,quantite_res,date_achat);
            bool test=m.modifier(ref_materiel);
            if (test){
-              ui->tableView->setModel(Etmp.afficher());
+              ui->affiche_mat->setModel(Etmp.afficher());
 
                QMessageBox::information(nullptr,QObject::tr("OK"),
                                         QObject::tr("modifier Effectuer\n"
@@ -675,8 +675,8 @@ void acceuil::on_pushButton_12_clicked() //boutton modifier (dans le widget modi
 void acceuil::on_pushButton_11_clicked() // boutton undo (modifier)
 {
     ui->lineEdit_12->setText("");
-    ui->lineEdit_10->setText("");
-    ui->lineEdit_11->setText("");
+    ui->lineEdit_14->setText("");
+    ui->lineEdit_20->setText("");
     ui->lineEdit_13->setText("");
 
 }
@@ -684,14 +684,12 @@ void acceuil::on_pushButton_11_clicked() // boutton undo (modifier)
 
 void acceuil::on_pushButton_13_clicked() // boutton supprimer(widget supprimer)
 {
-   QString ref_materiel= ui->lineEdit_14->text();
-   /*if(ref_materiel==""){
-        QMessageBox::warning(this,"ERROR","Veuillez remplir le champ requis");
-       */  QItemSelectionModel *select=ui->tableView->selectionModel();
- QString idd=select->selectedRows(0).value(0).data().toString();
-         bool test=Etmp.supprimer(ref_materiel);
+   QString ref_materiel= ui->lineEdit_21->text();
+   materiaux m;
+
+         bool test=m.supprimer(ref_materiel);
          if(test){
-ui->tableView->setModel(Etmp.afficher());
+ui->affiche_mat->setModel(Etmp.afficher());
              QMessageBox::information(nullptr,QObject::tr("OK"),
                                       QObject::tr("supprimer Effectuer\n"
                                                   "click cancel to exit"),QMessageBox::Cancel);
@@ -710,7 +708,7 @@ ui->tableView->setModel(Etmp.afficher());
 void acceuil::on_pushButton_14_clicked() //boutton undo supprimer
 {
 
-ui->lineEdit_14->setText("");
+ui->lineEdit_21->setText("");
 }
 
 void acceuil::on_pushButton_19_clicked() //boutton ajouter
@@ -811,21 +809,20 @@ void acceuil::on_pushButton_24_clicked() //quitter l'application du widget fourn
 void acceuil::on_pushButton_22_clicked() // ajouter  fournisseur dans le widget ajouter
 {
 
-
+/*
             Smtp* smtp = new Smtp("jemaaoussama64@gmail.com","Sousou22658131","smtp.gmail.com", 465);
             connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
             smtp->sendMail("jemaaoussama64@gmail.com", "oussama.jmaa@esprit.tn" , "Test","msg");
-
-    QString reference_materiel=ui->lineEdit_23->text();
-
-   QString mail_fournisseur=ui->lineEdit_21->text();
-           QString nom_fournisseur=ui->lineEdit_24 ->text();
+*/
+    QString reference_materiel=ui->lineEdit_25->text();
+   QString mail_fournisseur=ui->lineEdit_23->text();
+           QString nom_fournisseur=ui->lineEdit_26 ->text();
           double solde=ui->lineEdit_28->text().toDouble();
-           int id_fournisseur=ui->lineEdit_20->text().toInt();
-            int tel_founrisseur=ui->lineEdit_22->text().toInt();
+           int id_fournisseur=ui->lineEdit_22->text().toInt();
+            int tel_founrisseur=ui->lineEdit_24->text().toInt();
 
 
-                   fournisseurs f(nom_fournisseur, mail_fournisseur,reference_materiel, tel_founrisseur, id_fournisseur, solde);
+                   fournisseurs f( reference_materiel, id_fournisseur,mail_fournisseur, tel_founrisseur, solde, nom_fournisseur);
                    bool test=f.ajouter_fournisseur();
                    if (test){
                       ui->tableView_2->setModel(Etmp1.afficher_fournisseur());
@@ -841,7 +838,7 @@ void acceuil::on_pushButton_22_clicked() // ajouter  fournisseur dans le widget 
 }
 
 void acceuil::on_pushButton_29_clicked() // supprimer dans le widget supprimer
-{int id_fournisseur = ui->lineEdit_27->text().toInt();
+{int id_fournisseur = ui->lineEdit_30->text().toInt();
 
           bool test=Etmp1.supprimer_fournisseur(id_fournisseur);
           if(test){
@@ -860,7 +857,7 @@ void acceuil::on_pushButton_29_clicked() // supprimer dans le widget supprimer
 void acceuil::on_pushButton_26_clicked() // modifier fournisseur (modifier)
 {
     QString reference_materiel=ui->lineEdit_29->text();
-    QString nommateriel=ui->lineEdit_26->text();
+    QString nommateriel=ui->lineEdit_27->text();
 
 
 
@@ -880,7 +877,7 @@ void acceuil::on_pushButton_26_clicked() // modifier fournisseur (modifier)
 void acceuil::on_supprimer_4_clicked() // trier materiaux
 {
 
-     ui->tableView->setModel(Etmp.trier());
+     ui->affiche_mat->setModel(Etmp.trier());
 }
 
 void acceuil::on_trier_clicked() // trier fournisseur
@@ -906,17 +903,17 @@ void acceuil::on_tableView_2_activated(const QModelIndex &index)
      {
          while (query.next())
          {
- ui->lineEdit_29->setText(query.value(0).toString());
-             ui->lineEdit_26->setText(query.value(1).toString());
+ ui->lineEdit_27->setText(query.value(0).toString());
+             ui->lineEdit_29->setText(query.value(1).toString());
 
 
          }
 }
 }
 
-void acceuil::on_tableView_activated(const QModelIndex &index)
+void acceuil::on_affiche_mat_activated(const QModelIndex &index)
 {
-    QString ref_materiel = ui->tableView->model()->data(index).toString();
+    QString ref_materiel = ui->affiche_mat->model()->data(index).toString();
     QSqlQuery query;
     query.prepare(" select * from materiaux where ref_materiel = '"+ref_materiel+"'");
     if(query.exec())
@@ -924,9 +921,9 @@ void acceuil::on_tableView_activated(const QModelIndex &index)
         while (query.next())
         {
 ui->lineEdit_31->setText(query.value(0).toString());
-         ui->lineEdit_12->setText(query.value(1).toString());
-            ui->lineEdit_10->setText(query.value(2).toString());
-            ui->lineEdit_11->setText(query.value(3).toString());
+         ui->lineEdit_14->setText(query.value(1).toString());
+            ui->lineEdit_12->setText(query.value(2).toString());
+            ui->lineEdit_20->setText(query.value(3).toString());
             ui->lineEdit_13->setText(query.value(4).toString());
             ui->date_modifier->setDate(query.value(5).toDate());
 
@@ -941,7 +938,7 @@ ui->lineEdit_31->setText(query.value(0).toString());
 void acceuil::on_rechercher_ref_cursorPositionChanged()
 {
     materiaux m;
-    ui->tableView->setModel(m.rechercher(ui->rechercher_ref->text()));
+    ui->affiche_mat->setModel(m.rechercher(ui->rechercher_ref->text()));
     m.afficher();
 }
 
@@ -956,25 +953,25 @@ void acceuil::on_rechercher_id_cursorPositionChanged()
 
 void acceuil::on_pushButton_23_clicked() // undo fournisseur (ajouter  )
 {
-    ui->lineEdit_20->setText("");
-    ui->lineEdit_21->setText("");
+    ui->lineEdit_28->setText("");
+    ui->lineEdit_25->setText("");
     ui->lineEdit_22->setText("");
     ui->lineEdit_23->setText("");
     ui->lineEdit_24->setText("");
 
-     ui->lineEdit_28->setText("");
+     ui->lineEdit_26->setText("");
 
 }
 
 void acceuil::on_pushButton_27_clicked() // undo fournisseur (modifier)
 {
     ui->lineEdit_29->setText("");
-    ui->lineEdit_26->setText("");
+    ui->lineEdit_27->setText("");
 }
 
 void acceuil::on_pushButton_30_clicked() // undo fournisseur (supprimer)
 {
-    ui->lineEdit_27->setText("");
+    ui->lineEdit_30->setText("");
 }
 
 void acceuil::on_pushButton_5_clicked() // dark theme

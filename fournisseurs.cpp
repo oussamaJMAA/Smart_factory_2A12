@@ -5,14 +5,13 @@ fournisseurs::fournisseurs()
     nom_fournisseur="";
     mail_fournisseur="";
     reference_materiel="";
-
     id_fournisseur=0;
            tel_founrisseur=0;
             solde =0;
 }
 
 
-fournisseurs::fournisseurs(QString nom_fournisseur,QString mail_fournisseur,QString reference_materiel,int tel_founrisseur,int id_fournisseur,double solde){
+fournisseurs::fournisseurs(QString reference_materiel,int id_fournisseur,QString mail_fournisseur,int tel_founrisseur,double solde,QString nom_fournisseur){
 
 
 
@@ -38,15 +37,15 @@ double fournisseurs::getsolde(){return solde;}
 bool fournisseurs:: ajouter_fournisseur(){
     QSqlQuery query;
 
-    query.prepare("INSERT INTO fournisseur(id_fournisseur ,nom_fournisseur,reference_materiel,tel_founrisseur,mail_fournisseur,solde)"
-          "VALUES (:id_fournisseur,:nom_fournisseur,:reference_materiel,:tel_founrisseur,:mail_fournisseur,:solde)");
+    query.prepare("INSERT INTO fournisseur(reference_materiel ,ID_fournisseur,mail_fournisseur,tel_founrisseur,solde,nom_fournisseur)"
+          "VALUES (:reference_materiel,:id_fournisseur,:mail_fournisseur,:tel_founrisseur,:solde,:nom_fournisseur)");
    query.bindValue(":reference_materiel",reference_materiel);
    query.bindValue(":id_fournisseur",id_fournisseur);
    query.bindValue(":nom_fournisseur",nom_fournisseur);
    query.bindValue(":solde",solde);
-    query.bindValue(":prix",tel_founrisseur);
+    query.bindValue(":tel_founrisseur",tel_founrisseur);
     query.bindValue(":mail_fournisseur",mail_fournisseur);
-     query.bindValue(":tel_founrisseur",tel_founrisseur);
+
 
 
 return query.exec();

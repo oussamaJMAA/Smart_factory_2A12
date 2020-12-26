@@ -17,7 +17,7 @@ class fournisseurs
 
 public:
     fournisseurs();
-     fournisseurs(QString,QString,QString,int,int,double);
+     fournisseurs(QString,int,QString,int,double,QString);
 
      //getters
      QString getref_materiel();
