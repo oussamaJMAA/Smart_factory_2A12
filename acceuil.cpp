@@ -602,6 +602,10 @@ void acceuil::on_pushButton_3_clicked() // quitter l'application
 
 void acceuil::on_pushButton_16_clicked()// boutton ajouter
 {
+
+
+
+
     QString ref_materiel=ui->lineEdit_15->text();
    QString nom_materiel=ui->lineEdit_16->text();
           double prix=ui->lineEdit_17->text().toDouble();
@@ -814,6 +818,16 @@ void acceuil::on_pushButton_22_clicked() // ajouter  fournisseur dans le widget 
             connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
             smtp->sendMail("jemaaoussama64@gmail.com", "oussama.jmaa@esprit.tn" , "Test","msg");
 */
+
+
+
+
+
+
+
+
+
+
     QString reference_materiel=ui->lineEdit_25->text();
    QString mail_fournisseur=ui->lineEdit_23->text();
            QString nom_fournisseur=ui->lineEdit_26 ->text();
@@ -823,8 +837,8 @@ void acceuil::on_pushButton_22_clicked() // ajouter  fournisseur dans le widget 
 
 
                    fournisseurs f( reference_materiel, id_fournisseur,mail_fournisseur, tel_founrisseur, solde, nom_fournisseur);
-                   bool test=f.ajouter_fournisseur();
-                   if (test){
+                   bool test2=f.ajouter_fournisseur();
+                   if (test2){
                       ui->tableView_2->setModel(Etmp1.afficher_fournisseur());
 
                        QMessageBox::information(nullptr,QObject::tr("OK"),
@@ -997,3 +1011,13 @@ void acceuil::on_pushButton_6_clicked() // dark theme
  ui->pushButton_6->setVisible(false);
 }
 
+
+void acceuil::on_lineEdit_26_textChanged(const QString &arg1) // control de saisie pour nom fournisseur
+{
+    if(verifALPHA(ui->lineEdit_26->text()))
+
+
+ui->lineEdit_26->setStyleSheet("background-color: rgb(255, 160, 157)");
+
+else ui->lineEdit_26->setStyleSheet("background-color: rgb(0, 0, 0,0)");
+}

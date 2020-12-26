@@ -195,6 +195,8 @@ private slots:
     void on_pushButton_5_clicked();
 
     void on_pushButton_6_clicked();
+    void on_lineEdit_26_textChanged(const QString &arg1);
+
 private:
     Ui::acceuil *ui;
     QMediaPlayer *musicClic=new QMediaPlayer;
