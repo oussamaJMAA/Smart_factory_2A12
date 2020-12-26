@@ -55,8 +55,6 @@ model->setHeaderData(1,Qt::Horizontal,QObject::tr("nom_materiel"));
 model->setHeaderData(2,Qt::Horizontal,QObject::tr("quantite"));
 model->setHeaderData(3,Qt::Horizontal,QObject::tr("prix"));
 model->setHeaderData(4,Qt::Horizontal,QObject::tr("quantite_res"));
-
-
 model->setHeaderData(5,Qt::Horizontal,QObject::tr("date_achat"));
 return model;
 }

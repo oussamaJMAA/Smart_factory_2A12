@@ -34,7 +34,7 @@ acceuil::acceuil(QWidget *parent) : QDialog(parent), ui(new Ui::acceuil)
     ui->lineEdit_9->setValidator(new QIntValidator(0,99999999,this));
 
     // contrôle de saise pour materiaux et fournisseurs
-     ui->lineEdit_20->setValidator(new  QDoubleValidator(-99.0,99.0,4,this));//prix
+     ui->lineEdit_20->setValidator(new  QDoubleValidator(-99.0,99.0,4,this));//prix_unitaire
 
     ui->lineEdit_13->setValidator(new QIntValidator(0,99999999,this));//quantite_dispo
 
