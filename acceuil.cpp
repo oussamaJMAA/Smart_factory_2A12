@@ -41,7 +41,7 @@ acceuil::acceuil(QWidget *parent) : QDialog(parent), ui(new Ui::acceuil)
         ui->lineEdit_12->setValidator(new QIntValidator(0,99999,this));//quantite
 
 
-       ui->lineEdit_17->setValidator(new QIntValidator(0,99999,this));//quantite_dispo
+       ui->lineEdit_17->setValidator(new QIntValidator(0,99999,this));//quantite_dispoo
        ui->lineEdit_18->setValidator(new  QDoubleValidator(-99.0,99.0,4,this));//prix
        ui->lineEdit_19->setValidator(new QIntValidator(0,99999,this));//quantite_dispo
 
