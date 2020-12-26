@@ -185,7 +185,7 @@ background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255,
     <enum>QTabWidget::Triangular</enum>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -2734,7 +2734,7 @@ border:0px;
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
+       <y>10</y>
        <width>1131</width>
        <height>681</height>
       </rect>
@@ -2761,7 +2761,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
 }</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QFrame" name="frame_11">
@@ -2992,14 +2992,14 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_27">
        <property name="geometry">
         <rect>
-         <x>351</x>
+         <x>324</x>
          <y>161</y>
-         <width>104</width>
+         <width>131</width>
          <height>21</height>
         </rect>
        </property>
        <property name="text">
-        <string>ID_materiel</string>
+        <string>reference_materiel</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_28">
@@ -3298,8 +3298,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_12">
        <property name="geometry">
         <rect>
-         <x>474</x>
-         <y>244</y>
+         <x>470</x>
+         <y>240</y>
          <width>205</width>
          <height>27</height>
         </rect>
@@ -3309,7 +3309,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
        <property name="geometry">
         <rect>
          <x>470</x>
-         <y>310</y>
+         <y>340</y>
          <width>205</width>
          <height>27</height>
         </rect>
@@ -3360,8 +3360,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_14">
        <property name="geometry">
         <rect>
-         <x>474</x>
-         <y>211</y>
+         <x>470</x>
+         <y>200</y>
          <width>205</width>
          <height>27</height>
         </rect>
@@ -3383,8 +3383,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_34">
        <property name="geometry">
         <rect>
-         <x>320</x>
-         <y>270</y>
+         <x>310</x>
+         <y>300</y>
          <width>112</width>
          <height>21</height>
         </rect>
@@ -3397,7 +3397,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
        <property name="geometry">
         <rect>
          <x>470</x>
-         <y>280</y>
+         <y>290</y>
          <width>205</width>
          <height>27</height>
         </rect>
@@ -3423,7 +3423,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
        <property name="geometry">
         <rect>
          <x>311</x>
-         <y>343</y>
+         <y>400</y>
          <width>108</width>
          <height>21</height>
         </rect>
@@ -3435,8 +3435,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_36">
        <property name="geometry">
         <rect>
-         <x>300</x>
-         <y>300</y>
+         <x>310</x>
+         <y>350</y>
          <width>131</width>
          <height>21</height>
         </rect>
@@ -3449,7 +3449,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
        <property name="geometry">
         <rect>
          <x>311</x>
-         <y>211</y>
+         <y>190</y>
          <width>151</width>
          <height>21</height>
         </rect>
@@ -3478,7 +3478,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
        <property name="geometry">
         <rect>
          <x>320</x>
-         <y>170</y>
+         <y>150</y>
          <width>151</width>
          <height>21</height>
         </rect>
@@ -3491,7 +3491,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
        <property name="geometry">
         <rect>
          <x>470</x>
-         <y>170</y>
+         <y>150</y>
          <width>205</width>
          <height>27</height>
         </rect>
@@ -3501,7 +3501,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>350</y>
+         <y>400</y>
          <width>151</width>
          <height>22</height>
         </rect>
@@ -3594,14 +3594,14 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_39">
        <property name="geometry">
         <rect>
-         <x>201</x>
-         <y>261</y>
-         <width>104</width>
+         <x>170</x>
+         <y>270</y>
+         <width>131</width>
          <height>21</height>
         </rect>
        </property>
        <property name="text">
-        <string>ID_matériel</string>
+        <string>reference_matériel</string>
        </property>
       </widget>
      </widget>
@@ -3842,9 +3842,9 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
        <property name="geometry">
         <rect>
          <x>461</x>
-         <y>241</y>
-         <width>137</width>
-         <height>22</height>
+         <y>242</y>
+         <width>161</width>
+         <height>21</height>
         </rect>
        </property>
       </widget>
@@ -3879,7 +3879,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         <rect>
          <x>461</x>
          <y>325</y>
-         <width>137</width>
+         <width>161</width>
          <height>22</height>
         </rect>
        </property>
@@ -3889,7 +3889,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         <rect>
          <x>461</x>
          <y>353</y>
-         <width>137</width>
+         <width>161</width>
          <height>22</height>
         </rect>
        </property>
@@ -3957,7 +3957,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         <rect>
          <x>461</x>
          <y>297</y>
-         <width>137</width>
+         <width>161</width>
          <height>22</height>
         </rect>
        </property>
@@ -3967,7 +3967,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         <rect>
          <x>461</x>
          <y>269</y>
-         <width>137</width>
+         <width>161</width>
          <height>22</height>
         </rect>
        </property>
@@ -3988,7 +3988,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_46">
        <property name="geometry">
         <rect>
-         <x>250</x>
+         <x>270</x>
          <y>300</y>
          <width>181</width>
          <height>16</height>
@@ -4003,7 +4003,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         <rect>
          <x>461</x>
          <y>390</y>
-         <width>137</width>
+         <width>161</width>
          <height>22</height>
         </rect>
        </property>

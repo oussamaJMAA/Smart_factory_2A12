@@ -31,7 +31,7 @@ bool modifier (QString);
 QSqlQueryModel * trier();
 
 QSqlQueryModel* rechercher(QString);
-QSqlQueryModel* stat ();
+int stat ();
 int stat_2();
 };
 

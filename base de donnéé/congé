@@ -1,0 +1,47 @@
+--------------------------------------------------------
+--  Fichier créé - vendredi-décembre-25-2020   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table CONGES
+--------------------------------------------------------
+
+  CREATE TABLE "OUSSAMA"."CONGES" 
+   (	"ID_CONGE" NUMBER(*,0), 
+	"TYPE_CONGE" VARCHAR2(50 BYTE), 
+	"DATE_DEB_CONGE" DATE, 
+	"DATE_FIN_CONGE" DATE, 
+	"CIN" NUMBER(8,0)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM" ;
+REM INSERTING into OUSSAMA.CONGES
+SET DEFINE OFF;
+--------------------------------------------------------
+--  DDL for Index BIN$STftGx0IReqwNQ9bKLyVng==$0
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "OUSSAMA"."BIN$STftGx0IReqwNQ9bKLyVng==$0" ON "OUSSAMA"."CONGES" ("ID_CONGE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  Constraints for Table CONGES
+--------------------------------------------------------
+
+  ALTER TABLE "OUSSAMA"."CONGES" ADD CONSTRAINT "BIN$STftGx0IReqwNQ9bKLyVng==$0" PRIMARY KEY ("ID_CONGE")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+ 
+  ALTER TABLE "OUSSAMA"."CONGES" MODIFY ("ID_CONGE" NOT NULL ENABLE);
+ 
+  ALTER TABLE "OUSSAMA"."CONGES" MODIFY ("CIN" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table CONGES
+--------------------------------------------------------
+
+  ALTER TABLE "OUSSAMA"."CONGES" ADD CONSTRAINT "CONGES_FK1" FOREIGN KEY ("CIN")
+	  REFERENCES "OUSSAMA"."EMPLOYEURS" ("CIN") ENABLE;

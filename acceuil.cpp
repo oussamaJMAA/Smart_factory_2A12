@@ -12,7 +12,7 @@
 acceuil::acceuil(QWidget *parent) : QDialog(parent), ui(new Ui::acceuil)
 {
 
-    musicClic->setMedia(QUrl("C:/Users/Nasreddine/Documents/FuseSmart/clic.mp3"));
+    musicClic->setMedia(QUrl("C:/Users/oussa/Downloads/Gestion personnel (1)/Integration/clic.mp3"));
     ui->setupUi(this);
 
     ui->stackedWidget_2->setCurrentIndex(0); // intialiser le deuxieme widget(fournisseur)
@@ -21,8 +21,8 @@ acceuil::acceuil(QWidget *parent) : QDialog(parent), ui(new Ui::acceuil)
 
     musicClic->setVolume(10);
 
-    QPixmap addemp("C:/Users/Nasreddine/Documents/FuseSmart/AjouterEmployé.png"),
-            addcng("C:/Users/Nasreddine/Documents/FuseSmart/Ajoutercongé.png");
+    QPixmap addemp("C:/Users/oussa/Downloads/Gestion personnel (1)/Integration/IMG/AjouterEmployé.png"),
+            addcng("C:/Users/oussa/Downloads/Gestion personnel (1)/Integration/IMG/Ajoutercongé.png");
     ui->AjouterEmploye->setPixmap(addemp);ui->AjouterConge->setPixmap(addcng);
     ui->lineEdit->setValidator(new QIntValidator(0,99999999,this));
     ui->lineEdit_5->setValidator(new QIntValidator(0,99999999,this));
@@ -33,6 +33,26 @@ acceuil::acceuil(QWidget *parent) : QDialog(parent), ui(new Ui::acceuil)
     ui->modifierEmp_CIN_chercher->setValidator(new QIntValidator(0,99999999,this));
     ui->lineEdit_9->setValidator(new QIntValidator(0,99999999,this));
 
+    // contrôle de saise pour materiaux et fournisseurs
+     ui->lineEdit_20->setValidator(new  QDoubleValidator(-99.0,99.0,4,this));//prix
+
+    ui->lineEdit_13->setValidator(new QIntValidator(0,99999999,this));//quantite_dispo
+
+        ui->lineEdit_12->setValidator(new QIntValidator(0,99999,this));//quantite
+
+
+       ui->lineEdit_17->setValidator(new QIntValidator(0,99999,this));//quantite_dispo
+       ui->lineEdit_18->setValidator(new  QDoubleValidator(-99.0,99.0,4,this));//prix
+       ui->lineEdit_19->setValidator(new QIntValidator(0,99999,this));//quantite_dispo
+
+
+    ui->lineEdit_22->setValidator(new QIntValidator(0,99999999,this));//id_fournisseur
+
+    ui->lineEdit_27->setValidator(new QIntValidator(0,99999,this));//id_fournisseur
+    ui->lineEdit_24->setValidator(new QDoubleValidator(-99.0,99.0,4,this));//pr
+    ui->lineEdit_28->setValidator(new  QDoubleValidator(-99.0,99.0,4,this));//prix
+
+     ui->lineEdit_30->setValidator(new  QDoubleValidator(-99.0,99.0,4,this));//prix
 
 
 
@@ -773,11 +793,25 @@ void acceuil::on_pushButton_4_clicked()//"editer statistique
 { QMediaPlayer *musicLogin= new QMediaPlayer;
     musicLogin->setMedia(QUrl("C:/Users/oussa/Desktop/bouttonsound.mp3"));
         musicLogin->play();
-   ui->stackedWidget->setCurrentIndex(5);
+   materiaux m;
+   QPieSeries *series = new QPieSeries();
+      series->setHoleSize(0.40);
+      series->append("Materiaux Restant %", 1063);
+      QPieSlice *slice = series->append("Materiaux %",  884);
+      slice->setExploded();
+      slice->setLabelVisible();
+       QChartView *chartView = new QChartView();
+      chartView->setRenderHint(QPainter::Antialiasing);
+      chartView->chart()->setTitle("Statistique Materiaux");
+      chartView->chart()->addSeries(series);
+      chartView->chart()->legend()->setAlignment(Qt::AlignBottom);
+      chartView->chart()->setTheme(QChart::ChartThemeDark);
+      chartView->chart()->legend()->setFont(QFont("Arial", 7));
 
- ui->tableView_3->setModel(Etmp.stat());
+chartView->show();
+chartView->resize(800,600);
 
- //ui->tableView_3->setModel(Etmp.stat_2());
+
 }
 
 
@@ -1012,12 +1046,49 @@ void acceuil::on_pushButton_6_clicked() // dark theme
 }
 
 
-void acceuil::on_lineEdit_26_textChanged(const QString &arg1) // control de saisie pour nom fournisseur
+void acceuil::on_lineEdit_26_textChanged() // control de saisie pour nom fournisseur
 {
-    if(verifALPHA(ui->lineEdit_26->text()))
+    if(control_saisie_chaine(ui->lineEdit_26->text()))
 
 
 ui->lineEdit_26->setStyleSheet("background-color: rgb(255, 160, 157)");
 
 else ui->lineEdit_26->setStyleSheet("background-color: rgb(0, 0, 0,0)");
 }
+
+void acceuil::on_lineEdit_27_textChanged()
+{
+    if(control_saisie_chaine(ui->lineEdit_27->text()))
+
+
+ui->lineEdit_27->setStyleSheet("background-color: rgb(255, 160, 157)");
+
+else ui->lineEdit_27->setStyleSheet("background-color: rgb(0, 0, 0,0)");
+
+}
+
+void acceuil::on_lineEdit_16_textChanged()
+{if(control_saisie_chaine(ui->lineEdit_16->text()))
+
+
+        ui->lineEdit_16->setStyleSheet("background-color: rgb(255, 160, 157)");
+
+        else ui->lineEdit_16->setStyleSheet("background-color: rgb(0, 0, 0,0)");
+
+}
+
+
+
+void acceuil::on_lineEdit_14_textChanged()
+{
+    if(control_saisie_chaine(ui->lineEdit_14->text()))
+
+
+            ui->lineEdit_14->setStyleSheet("background-color: rgb(255, 160, 157)");
+
+            else ui->lineEdit_14->setStyleSheet("background-color: rgb(0, 0, 0,0)");
+}
+
+
+
+

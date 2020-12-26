@@ -17,7 +17,10 @@
 #include "connection.h"
 #include <materiaux.h>
 #include <fournisseurs.h>
-
+#include <QtCharts/QChart>
+#include <QtCharts/QPieSeries>
+#include <QtCharts/QChartView>
+#include <QtCharts>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -59,6 +62,20 @@ public:
         else if(date=="1950/12/24"|| date=="24/12/1950" || date.length()!=10)
                     date="";
         return date;
+    }
+
+    bool control_saisie_chaine(QString ch){
+        {
+            ch=ch.toUpper();
+            if(ch=="")
+                return true;
+            else
+            for(int i=0;i<ch.length();i++)
+                if((ch[i]<'A' || ch[i]>'Z') && ch[i]!=" " )
+                    return true;
+
+            return false;
+        }
     }
 
 private slots:
@@ -195,7 +212,17 @@ private slots:
     void on_pushButton_5_clicked();
 
     void on_pushButton_6_clicked();
-    void on_lineEdit_26_textChanged(const QString &arg1);
+    void on_lineEdit_26_textChanged();
+
+    void on_lineEdit_27_textChanged();
+
+    void on_lineEdit_16_textChanged();
+
+    void on_lineEdit_14_textChanged();
+
+
+
+
 
 private:
     Ui::acceuil *ui;

@@ -117,22 +117,33 @@ QSqlQueryModel* materiaux ::rechercher (QString s){
 
 
 }
-QSqlQueryModel * materiaux::stat()
-{ QSqlQueryModel * model =new QSqlQueryModel();
-model->setQuery("select sum(quantite_res) from materiaux");
+int materiaux::stat()
+{ QSqlQuery  query;
+    query.prepare("select sum(quantite_res) from materiaux");
+    query.exec();
+      int i =0;
+   while(query.next()){
 
-model->setHeaderData(0,Qt::Horizontal,QObject::tr("Quantite Restante"));
+        i++;
+    }
 
-return model;
+   return i;
+    }
 
-}
+
+
 
 int materiaux::stat_2()
-{ QSqlQuery query;
-query.prepare("select sum(quantite) from materiaux");
+{ QSqlQuery  *query  = new QSqlQuery();
+    query->prepare("select sum(quantite) from materiaux");
+    query->exec();
+      int i =0;
+    while(query->next()){
+
+        i++;
+    }
+    return i;
+    }
 
 
 
-return query.exec();
-
-}

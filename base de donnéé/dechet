@@ -1,0 +1,47 @@
+--------------------------------------------------------
+--  Fichier créé - vendredi-décembre-25-2020   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table DECHET
+--------------------------------------------------------
+
+  CREATE TABLE "OUSSAMA"."DECHET" 
+   (	"REF" NUMBER, 
+	"VOLUME" NUMBER, 
+	"NATURE" VARCHAR2(20 BYTE), 
+	"MODE_TRAITEMENT" VARCHAR2(20 BYTE), 
+	"FILIERE" VARCHAR2(20 BYTE), 
+	"LIEU" VARCHAR2(20 BYTE), 
+	"REF_MATERIEL" VARCHAR2(20 BYTE)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM" ;
+REM INSERTING into OUSSAMA.DECHET
+SET DEFINE OFF;
+--------------------------------------------------------
+--  DDL for Index DECHET_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "OUSSAMA"."DECHET_PK" ON "OUSSAMA"."DECHET" ("REF") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  Constraints for Table DECHET
+--------------------------------------------------------
+
+  ALTER TABLE "OUSSAMA"."DECHET" ADD CONSTRAINT "DECHET_PK" PRIMARY KEY ("REF")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+ 
+  ALTER TABLE "OUSSAMA"."DECHET" MODIFY ("REF" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table DECHET
+--------------------------------------------------------
+
+  ALTER TABLE "OUSSAMA"."DECHET" ADD CONSTRAINT "DECHET_FK1" FOREIGN KEY ("REF_MATERIEL")
+	  REFERENCES "OUSSAMA"."MATERIAUX" ("REF_MATERIEL") ENABLE;

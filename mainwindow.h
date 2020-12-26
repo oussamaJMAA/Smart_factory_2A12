@@ -17,7 +17,8 @@
 
 #include "employeurs.h"
 #include "acceuil.h"
-
+#include <QtCharts/QChart>
+#include <QtCharts/QPieSeries>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
