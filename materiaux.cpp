@@ -71,7 +71,7 @@ bool materiaux::supprimer(QString ref_materiel){
 bool materiaux::modifier(QString ref_materiel){
 
     QSqlQuery query ;
-    query.prepare("update materiaux set nom_materiel= :nom_materiel , quantite= :quantite , quantite_res = :quantite_res , prix= :prix,date_achat= :date_achat where ref_materiel= :ref_materiel");
+    query.prepare("update materiaux set nom_materiel=:nom_materiel , quantite=:quantite , quantite_res =:quantite_res , prix=:prix,date_achat=:date_achat where ref_materiel=:ref_materiel");
     query.bindValue(":nom_materiel",nom_materiel);
     query.bindValue(":quantite",quantite);
     query.bindValue(":quantite_res",quantite_res);

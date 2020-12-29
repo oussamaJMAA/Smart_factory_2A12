@@ -33,7 +33,7 @@ public:
      bool ajouter_fournisseur();
      QSqlQueryModel * afficher_fournisseur();
      bool supprimer_fournisseur(int);
-     bool modifier_fournisseur(QString ,QString);
+     bool modifier_fournisseur(int);
      QSqlQueryModel * trier1();
      QSqlQueryModel * rechercher1(QString);
 };

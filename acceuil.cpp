@@ -671,10 +671,10 @@ void acceuil::on_pushButton_18_clicked()
 void acceuil::on_pushButton_12_clicked() //boutton modifier (dans le widget modifier)
 {
     QString ref_materiel=ui->lineEdit_31->text();
-    QString nom_materiel=ui->lineEdit_12->text();
-   int quantite =ui->lineEdit_10->text().toInt();
-          int  quantite_res=ui->lineEdit_11->text().toInt();
-           double prix=ui->lineEdit_13->text().toDouble();
+    QString nom_materiel=ui->lineEdit_14->text();
+   int quantite =ui->lineEdit_12->text().toInt();
+          int  quantite_res=ui->lineEdit_13->text().toInt();
+           double prix=ui->lineEdit_20->text().toDouble();
            QDate date_achat = ui->date_modifier->date();
            materiaux m(ref_materiel,nom_materiel,prix,quantite,quantite_res,date_achat);
            bool test=m.modifier(ref_materiel);
@@ -904,12 +904,16 @@ void acceuil::on_pushButton_29_clicked() // supprimer dans le widget supprimer
 
 void acceuil::on_pushButton_26_clicked() // modifier fournisseur (modifier)
 {
-    QString reference_materiel=ui->lineEdit_29->text();
-    QString nommateriel=ui->lineEdit_27->text();
+   int id_fournisseur=ui->lineEdit_8->text().toInt();
+   QString ref_mat=ui->lineEdit_7->text();
+   QString mail=ui->lineEdit_29->text();
+   int tel =ui->lineEdit_27->text().toInt();
+   int solde =ui->lineEdit_32->text().toInt();
+   QString nom = ui->lineEdit_33->text();
 
+fournisseurs f(ref_mat,id_fournisseur,mail,tel,solde,nom);
+bool test = f.modifier_fournisseur(id_fournisseur);
 
-
-           bool test=Etmp1.modifier_fournisseur(reference_materiel,nommateriel);
            if (test){
               ui->tableView_2->setModel(Etmp1.afficher_fournisseur());
 
@@ -944,15 +948,19 @@ void acceuil::on_tableView_2_activated(const QModelIndex &index)
 
      QString id = ui->tableView_2->model()->data(index).toString();
      QSqlQuery query;
-     query.prepare(" select * from fournisseur  where id_fournisseur = '"+id+"'");
+     query.prepare(" select * from fournisseur   where id_fournisseur = '"+id+"'");
 
    //  ui->tableView_2->setStyleSheet("QTableView { selection-color: black; selection-background-color: green; }");
      if(query.exec())
      {
          while (query.next())
          {
- ui->lineEdit_27->setText(query.value(0).toString());
-             ui->lineEdit_29->setText(query.value(1).toString());
+ ui->lineEdit_27->setText(query.value(3).toString());
+ui->lineEdit_7->setText(query.value(0).toString());
+ui->lineEdit_8->setText(query.value(1).toString());
+ui->lineEdit_29->setText(query.value(2).toString());
+ui->lineEdit_33->setText(query.value(5).toString());
+ui->lineEdit_32->setText(query.value(4).toString());
 
 
          }
@@ -1013,7 +1021,7 @@ void acceuil::on_pushButton_23_clicked() // undo fournisseur (ajouter  )
 
 void acceuil::on_pushButton_27_clicked() // undo fournisseur (modifier)
 {
-    ui->lineEdit_29->setText("");
+
     ui->lineEdit_27->setText("");
 }
 
