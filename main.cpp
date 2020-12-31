@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-
+//traduction en anglais
     QTranslator t ;
     QStringList languages ;
     languages << "French" << "English" ;
