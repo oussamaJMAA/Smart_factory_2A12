@@ -8,6 +8,8 @@
 #define colorFalse "color:red;"
 #define colorTrue "color:rgb(28,255,33);"
 #define Transparent "color:transparent;"
+#include <QFontDialog>
+
 
 acceuil::acceuil(QWidget *parent) : QDialog(parent), ui(new Ui::acceuil)
 {

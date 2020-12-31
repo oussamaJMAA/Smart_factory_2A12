@@ -55,7 +55,7 @@ return query.exec();
 QSqlQueryModel * fournisseurs::afficher_fournisseur()
 { QSqlQueryModel * model =new QSqlQueryModel();
 model->setQuery("select reference_materiel,ID_fournisseur,nom_fournisseur,mail_fournisseur,tel_founrisseur,solde from fournisseur");
-model->setHeaderData(0,Qt::Horizontal,QObject::tr("reference_materiel"));
+model->setHeaderData(0,Qt::Horizontal,QObject::tr("ref_materiel"));
 model->setHeaderData(1,Qt::Horizontal,QObject::tr("ID_fournisseur"));
 model->setHeaderData(2,Qt::Horizontal,QObject::tr("nom_fournisseur"));
 model->setHeaderData(3,Qt::Horizontal,QObject::tr("mail_fournisseur"));
@@ -87,6 +87,7 @@ bool fournisseurs::modifier_fournisseur(int id_fournisseur){
 query.bindValue(":tel_founrisseur",tel_founrisseur);
 query.bindValue(":solde",solde);
 query.bindValue(":mail_fournisseur",mail_fournisseur);
+query.bindValue(":nom_fournisseur",nom_fournisseur);
     return query.exec();
 }
 

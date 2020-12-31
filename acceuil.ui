@@ -185,7 +185,7 @@ background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255,
     <enum>QTabWidget::Triangular</enum>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -2761,7 +2761,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
 }</string>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QFrame" name="frame_11">
@@ -3104,7 +3104,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         </rect>
        </property>
        <property name="text">
-        <string>Undo</string>
+        <string>annuler</string>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_18">
@@ -3377,7 +3377,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         </rect>
        </property>
        <property name="text">
-        <string>Undo</string>
+        <string>annuler</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_34">
@@ -3568,7 +3568,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         </rect>
        </property>
        <property name="text">
-        <string>Undo</string>
+        <string>annuler</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_21">
@@ -3683,7 +3683,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
 }</string>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page_3">
       <widget class="QFrame" name="frame_12">
@@ -3985,7 +3985,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         </rect>
        </property>
        <property name="text">
-        <string>Undo</string>
+        <string>annuler</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_46">
@@ -4185,10 +4185,10 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         </rect>
        </property>
        <property name="text">
-        <string>Undo</string>
+        <string>annuler</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>310</x>
@@ -4332,7 +4332,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         </rect>
        </property>
        <property name="text">
-        <string>Undo</string>
+        <string>annuler</string>
        </property>
       </widget>
      </widget>
