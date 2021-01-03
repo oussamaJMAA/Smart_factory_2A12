@@ -78,6 +78,9 @@ public:
         }
     }
 
+
+    void calcul();
+
 private slots:
     void sendMail(QString subject , QString msg){
             Smtp* smtp = new Smtp("nasreddine.elmadhkour@esprit.tn","191JFT2263","smtp.gmail.com", 465);
@@ -164,7 +167,7 @@ private slots:
 
     void on_pushButton_28_clicked();
 
-    void on_pushButton_4_clicked();
+
 
 
 
@@ -201,7 +204,7 @@ private slots:
 
 
 
-    void on_affiche_mat_activated(const QModelIndex &index);
+    void on_affiche_mat_activated();
 
     void on_pushButton_23_clicked();
 
@@ -223,6 +226,10 @@ private slots:
 
 
 
+
+
+
+    void on_affiche_mat_activated(const QModelIndex &index);
 
 private:
     Ui::acceuil *ui;

@@ -12,9 +12,10 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 //traduction en anglais
     QTranslator t ;
+
     QStringList languages ;
     languages << "French" << "English" ;
-    QString lang = QInputDialog::getItem(NULL,"select Language ","Language",languages);
+    QString lang = QInputDialog::getItem(NULL,"select Language ","Languages",languages);
     if(lang=="English")
     {
         t.load(":/english.qm");
@@ -23,6 +24,7 @@ int main(int argc, char *argv[])
     if (lang!="French"){
         a.installTranslator(&t);
     }
+
 
     //QSplashScreen *splash=new QSplashScreen;
     //QPixmap addemp("C:/Users/Nasreddine/Documents/FuseSmart/SF.png");

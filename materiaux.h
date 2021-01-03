@@ -33,6 +33,9 @@ QSqlQueryModel * trier();
 QSqlQueryModel* rechercher(QString);
 int stat ();
 int stat_2();
+int nombre();
+QSqlQueryModel *statis();
+int calcul();
 };
 
 #endif // MATERIAUX_H

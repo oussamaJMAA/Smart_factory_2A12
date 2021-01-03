@@ -2,7 +2,6 @@
 #include <QDate>
 
 
-
 materiaux::materiaux(){
     ref_materiel="";
     nom_materiel="";
@@ -66,6 +65,7 @@ bool materiaux::supprimer(QString ref_materiel){
    query.prepare("Delete from materiaux where ref_materiel= :ref_materiel");
    query.bindValue(":ref_materiel",ref_materiel);
    return query.exec();
+
 }
 
 bool materiaux::modifier(QString ref_materiel){
@@ -145,3 +145,33 @@ int materiaux::stat_2()
 
 
 
+int materiaux::nombre()
+{
+    QSqlQueryModel model;
+    model.setQuery("SELECT * FROM materiaux");
+
+  return model.rowCount();
+}
+QSqlQueryModel *materiaux::statis(){
+
+    QSqlQueryModel * model =new QSqlQueryModel();
+
+   model->setQuery("select sum(quantite) from materiaux");
+   model->setHeaderData(0,Qt::Horizontal,QObject::tr("Somme Quatite"));
+  return model;
+
+}
+
+
+int materiaux::calcul(){
+
+    QSqlQueryModel *model ;
+    int result = 0;
+       const int column = 1;
+       for (int row = 0; row < model->rowCount(); ++row) {
+           result += model->data(model->index(row, column)).toInt();
+       }
+
+
+return result ;
+}

@@ -23,6 +23,8 @@ acceuil::acceuil(QWidget *parent) : QDialog(parent), ui(new Ui::acceuil)
 
     musicClic->setVolume(10);
 
+
+
     QPixmap addemp("C:/Users/oussa/Downloads/Gestion personnel (1)/Integration/IMG/AjouterEmployé.png"),
             addcng("C:/Users/oussa/Downloads/Gestion personnel (1)/Integration/IMG/Ajoutercongé.png");
     ui->AjouterEmploye->setPixmap(addemp);ui->AjouterConge->setPixmap(addcng);
@@ -566,8 +568,8 @@ void acceuil::on_pushButton_2_clicked() // boutton afficher materiaux
    musicLogin->setMedia(QUrl("C:/Users/oussa/Desktop/bouttonsound.mp3"));
        musicLogin->play();
 ui->affiche_mat->setModel(Etmp.afficher());
-//ui->comboBox->setModel(Etmp.afficher());
-//ui->lineEdit_10
+
+
 }
 
 void acceuil::on_modifier_2_clicked() // boutton modifier
@@ -598,22 +600,28 @@ void acceuil::on_quitter_2_clicked() // retour du menu afficher
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-void acceuil::on_pushButton_3_clicked() // quitter l'application
+void acceuil::on_pushButton_3_clicked() // Afficher les statistiques
 
 
 {
-    QMediaPlayer *musicLogin= new QMediaPlayer;
-   musicLogin->setMedia(QUrl("C:/Users/oussa/Desktop/applepay.mp3"));
-       musicLogin->play();
+    int x= ui->calcul->text().toInt();
+    int y=ui->calcul2->text().toInt();
+    QPieSeries *series = new QPieSeries();
+       series->setHoleSize(0.40);
+            series->append("Quantite global %",x);
+       QPieSlice *slice = series->append("Quantite   restante %", y);
+       slice->setExploded();
+       slice->setLabelVisible();
+        QChartView *chartView = new QChartView();
+       chartView->setRenderHint(QPainter::Antialiasing);
+       chartView->chart()->setTitle("Statistique Materiaux");
+       chartView->chart()->addSeries(series);
+       chartView->chart()->legend()->setAlignment(Qt::AlignBottom);
+       chartView->chart()->setTheme(QChart::ChartThemeDark);
+       chartView->chart()->legend()->setFont(QFont("Arial", 7));
 
-
-    QMessageBox::StandardButton reply = QMessageBox::question(this,"fenêtre","voulez vous quittez",QMessageBox::Yes| QMessageBox::No);
-
-    if(reply==QMessageBox::Yes){
-        QApplication::quit();
-    }else{
-        qDebug()<<"no is clicked";
-    }
+ chartView->show();
+ chartView->resize(800,600);
 
 
 
@@ -790,31 +798,7 @@ void acceuil::on_pushButton_28_clicked()
     ui->stackedWidget_2->setCurrentIndex(2);
 }
 
-void acceuil::on_pushButton_4_clicked()//"editer statistique
 
-{ QMediaPlayer *musicLogin= new QMediaPlayer;
-    musicLogin->setMedia(QUrl("C:/Users/oussa/Desktop/bouttonsound.mp3"));
-        musicLogin->play();
-   materiaux m;
-   QPieSeries *series = new QPieSeries();
-      series->setHoleSize(0.40);
-      series->append("Materiaux Restant %", 1063);
-      QPieSlice *slice = series->append("Materiaux %",  884);
-      slice->setExploded();
-      slice->setLabelVisible();
-       QChartView *chartView = new QChartView();
-      chartView->setRenderHint(QPainter::Antialiasing);
-      chartView->chart()->setTitle("Statistique Materiaux");
-      chartView->chart()->addSeries(series);
-      chartView->chart()->legend()->setAlignment(Qt::AlignBottom);
-      chartView->chart()->setTheme(QChart::ChartThemeDark);
-      chartView->chart()->legend()->setFont(QFont("Arial", 7));
-
-chartView->show();
-chartView->resize(800,600);
-
-
-}
 
 
 
@@ -824,24 +808,7 @@ void acceuil::on_retour_clicked()
        ui->stackedWidget->setCurrentIndex(0);
 }
 
-void acceuil::on_pushButton_24_clicked() //quitter l'application du widget fournisseur
 
-{
-    QMediaPlayer *musicLogin= new QMediaPlayer;
-   musicLogin->setMedia(QUrl("C:/Users/oussa/Desktop/applepay.mp3"));
-       musicLogin->play();
-
-
-    QMessageBox::StandardButton reply = QMessageBox::question(this,"fenêtre","voulez vous quittez",QMessageBox::Yes| QMessageBox::No);
-
-    if(reply==QMessageBox::Yes){
-        QApplication::quit();
-    }else{
-        qDebug()<<"no is clicked";
-    }
-
-
-}
 
 
 
@@ -957,7 +924,7 @@ void acceuil::on_tableView_2_activated(const QModelIndex &index)
      {
          while (query.next())
          {
- ui->lineEdit_27->setText(query.value(3).toString());
+ui->lineEdit_27->setText(query.value(3).toString());
 ui->lineEdit_7->setText(query.value(0).toString());
 ui->lineEdit_8->setText(query.value(1).toString());
 ui->lineEdit_29->setText(query.value(2).toString());
@@ -969,8 +936,32 @@ ui->lineEdit_32->setText(query.value(4).toString());
 }
 }
 
-void acceuil::on_affiche_mat_activated(const QModelIndex &index)
+void acceuil::on_affiche_mat_activated()
 {
+
+const QModelIndex index;
+
+    QSqlQueryModel * model = new QSqlQueryModel();
+
+              model->setQuery("select * from materiaux");
+
+             ui->affiche_mat->setModel(model);
+             int result = 0;
+               const int column = 2;
+
+               for (int row = 0; row < model->rowCount(); ++row) {
+                   result += model->data(model->index(row, column)).toInt();
+               }
+               ui->calcul->setText( QString::number(result) ); // show sum in label
+int result1=0;
+               const int column2 = 4;
+
+               for (int row = 0; row < model->rowCount(); ++row) {
+                   result1 += model->data(model->index(row, column2)).toInt();
+               }
+               ui->calcul2->setText( QString::number(result1) ); // show sum in label
+
+
     QString ref_materiel = ui->affiche_mat->model()->data(index).toString();
     QSqlQuery query;
     query.prepare(" select * from materiaux where ref_materiel = '"+ref_materiel+"'");
@@ -1102,3 +1093,28 @@ void acceuil::on_lineEdit_14_textChanged()
 
 
 
+
+
+
+
+
+void acceuil::on_affiche_mat_activated(const QModelIndex &index)
+{
+    QString ref_materiel = ui->affiche_mat->model()->data(index).toString();
+    QSqlQuery query;
+    query.prepare(" select * from materiaux where ref_materiel = '"+ref_materiel+"'");
+    if(query.exec())
+    {
+        while (query.next())
+        {
+ui->lineEdit_31->setText(query.value(0).toString());
+         ui->lineEdit_14->setText(query.value(1).toString());
+            ui->lineEdit_12->setText(query.value(2).toString());
+            ui->lineEdit_20->setText(query.value(3).toString());
+            ui->lineEdit_13->setText(query.value(4).toString());
+            ui->date_modifier->setDate(query.value(5).toDate());
+
+
+        }
+}
+}

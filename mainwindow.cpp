@@ -5,11 +5,11 @@
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent) , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap logo("C:/Users/oussa/Downloads/Gestion personnel/IMG/logo.png");
+    QPixmap logo("C:/Users/oussa/Desktop/test/IMGlogo.png");
 
 
 
-    musicLogin->setMedia(QUrl("C:/Users/oussa/Downloads/Gestion personnel/IMG/loginmp3.mp3"));
+    musicLogin->setMedia(QUrl("C:/Users/oussa/Desktop/test/loginmp3.mp3"));
 
 
     ui->FuseSmart->setPixmap(logo);
