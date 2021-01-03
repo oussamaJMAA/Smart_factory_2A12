@@ -60,13 +60,14 @@ return model;
 
 
 
-bool materiaux::supprimer(QString ref_materiel){
+bool materiaux::supprimer(QString ref_materiel ){
     QSqlQuery query;
-   query.prepare("Delete from materiaux where ref_materiel= :ref_materiel");
+   query.prepare("Delete from materiaux where ref_materiel=:ref_materiel");
    query.bindValue(":ref_materiel",ref_materiel);
    return query.exec();
 
 }
+
 
 bool materiaux::modifier(QString ref_materiel){
 

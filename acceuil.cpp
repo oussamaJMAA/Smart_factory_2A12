@@ -583,11 +583,29 @@ void acceuil::on_pushButton_10_clicked() // boutton retour du widget modifier
 }
 
 
-void acceuil::on_supprimer_2_clicked() // boutton supprimer
+void acceuil::on_supprimer_2_clicked() // boutton supprimer materiel
 {
+    QString idd=ui->lineEdit_21->text();
+    materiaux *Etmp=new materiaux();
+    if (idd=="")
+    { QMessageBox::information(this,"non existe","id n'existe pas");}
+    else
+    {
+        QString str = " Vous voulez vraiment supprimer le materiel \n ayant la reference:"+ ui->lineEdit_21->text();
+        int ret = QMessageBox::question(this, tr("Suppression"),str,QMessageBox::Yes|QMessageBox::Cancel);
+        switch (ret) {
+        case QMessageBox::Yes:
+
+            if (Etmp->supprimer(idd))
+            {
+                ui->affiche_mat->setModel(Etmp->afficher());
+            }
+            break;
 
 
-     ui->stackedWidget->setCurrentIndex(4);
+        }
+    }
+     //ui->stackedWidget->setCurrentIndex(4);
 }
 
 void acceuil::on_pushButton_15_clicked() // boutton retour du widget supprimer
@@ -789,7 +807,26 @@ void acceuil::on_pushButton_25_clicked() //boutton retour (widget modifier fourn
 void acceuil::on_supprimer_3_clicked() // boutton supprimer (affichage fournisseur)
 {
 
-    ui->stackedWidget_2->setCurrentIndex(4);
+    int idd=ui->lineEdit_30->text().toInt();
+    fournisseurs *f=new fournisseurs();
+    if (idd==0)
+    { QMessageBox::information(this,"non existe","id n'existe pas");}
+    else
+    {
+        QString str = " Vous voulez vraiment supprimer le fournisseur\n ayant l' ID:"+ ui->lineEdit_30->text();
+        int ret = QMessageBox::question(this, tr("Suppression"),str,QMessageBox::Yes|QMessageBox::Cancel);
+        switch (ret) {
+        case QMessageBox::Yes:
+
+             f->supprimer_fournisseur(idd);
+
+                ui->tableView_2->setModel(f->afficher_fournisseur());
+
+            break;
+
+
+        }
+    }
 }
 
 
@@ -930,7 +967,7 @@ ui->lineEdit_8->setText(query.value(1).toString());
 ui->lineEdit_29->setText(query.value(2).toString());
 ui->lineEdit_33->setText(query.value(5).toString());
 ui->lineEdit_32->setText(query.value(4).toString());
-
+ui->lineEdit_30->setText(query.value(1).toString());
 
          }
 }
@@ -1113,6 +1150,7 @@ ui->lineEdit_31->setText(query.value(0).toString());
             ui->lineEdit_20->setText(query.value(3).toString());
             ui->lineEdit_13->setText(query.value(4).toString());
             ui->date_modifier->setDate(query.value(5).toDate());
+            ui->lineEdit_21->setText(query.value(0).toString());
 
 
         }

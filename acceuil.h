@@ -196,7 +196,7 @@ private slots:
 
 
 
- //   void on_rechercher_ref_textEdited(const QString &arg1);
+
 
     void on_rechercher_ref_cursorPositionChanged();
 

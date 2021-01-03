@@ -73,6 +73,7 @@ return model;
 
 bool fournisseurs::supprimer_fournisseur(int id_fournisseur){
     QSqlQuery query;
+
    query.prepare("Delete from fournisseur where id_fournisseur= :id_fournisseur");
    query.bindValue(":id_fournisseur",id_fournisseur);
    return query.exec();

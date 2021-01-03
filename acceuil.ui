@@ -185,7 +185,7 @@ background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255,
     <enum>QTabWidget::Triangular</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -2761,7 +2761,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
 }</string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QFrame" name="frame_11">
@@ -3696,7 +3696,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <rect>
        <x>-10</x>
        <y>10</y>
-       <width>1141</width>
+       <width>1351</width>
        <height>701</height>
       </rect>
      </property>
@@ -3722,7 +3722,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
 }</string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="page_3">
       <widget class="QFrame" name="frame_12">
