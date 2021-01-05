@@ -79,6 +79,14 @@ private slots:
 
     void on_print_clicked();
 
+    void on_pushButton_29_clicked();
+
+    void on_pushButton_28_clicked();
+
+    void on_pushButton_27_clicked();
+
+    void on_pushButton_30_clicked();
+
 private:
     Ui::MainWindow *ui;
     Client c;

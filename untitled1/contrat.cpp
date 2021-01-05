@@ -12,7 +12,7 @@ Contrat::Contrat()
     qte=0;
     pt=0;
 }
-Contrat::Contrat(QString num , QString type, float prix, int qte, QDate datec, float pt )
+Contrat::Contrat(QString num , QString type, float prix, int qte, QDate datec, float pt,QString idclient,QString REF_mat)
 {
    this->num=num;
     this->type=type;
@@ -20,9 +20,8 @@ Contrat::Contrat(QString num , QString type, float prix, int qte, QDate datec, f
     this->qte=qte;
     this->pt=pt;
     this->datec=datec;
-
-
-
+    this->idclient=idclient;
+    this->REF_mat=REF_mat;
 
 }
 
@@ -52,14 +51,19 @@ bool Contrat::ajouter()
     QString chqt = QString::number(qte);
     QString chpt = QString::number(pt);
     QString chprix = QString::number(prix);
-          query.prepare("INSERT INTO CONTRAT (NUM_C, TYPE , QUANTITE , PRIXTOTAL , PRIXELEMENT , DATEC) "
-                        "VALUES (:num, :type, :quantity , :pt ,:prix , :date)");
+          query.prepare("INSERT INTO CONTRAT (NUM_C, TYPE , QUANTITE , PRIXTOTAL , PRIXELEMENT , DATEC,REF_MATERIEL,ID) "
+                        "VALUES (:num, :type, :quantity , :pt ,:prix , :date , :REF_MATERIEL , :ID )");
+
+          // INSERT INTO contrat (NUM_C,PRIXELEMENT,PRIXTOTAL,TYPE,QUANTITE,DATEC,REF_MATERIEL,ID)VALUES('9999999',10,100,'mat',10,'20/12/2020','dolce','45678977')
+
           query.bindValue(":num", num);
           query.bindValue(":type", type);
           query.bindValue(":quantity", chqt);
           query.bindValue(":pt", chpt);
           query.bindValue(":prix", chprix);
           query.bindValue(":date", datec);
+          query.bindValue(":REF_MATERIEL",REF_mat);
+          query.bindValue(":ID", idclient);
           return query.exec();
 
 }
@@ -76,10 +80,6 @@ bool Contrat::modifier(QString num,QString type,float prix,int qte,float pt)
      test=true;
      return test;
 
-
-
-
-
 }
 
 
@@ -90,13 +90,15 @@ QSqlQueryModel* Contrat::afficher()
   QSqlQueryModel* model=new QSqlQueryModel();
 
 
-   model->setQuery("SELECT* FROM Contrat");
-   model->setHeaderData(0, Qt::Horizontal, QObject::tr("numero du contrat"));
-   model->setHeaderData(1, Qt::Horizontal, QObject::tr("prix d'un element"));
-   model->setHeaderData(2, Qt::Horizontal, QObject::tr("Prix Total"));
-   model->setHeaderData(3, Qt::Horizontal, QObject::tr("Type"));
-   model->setHeaderData(4, Qt::Horizontal, QObject::tr("Quantite "));
-   model->setHeaderData(5, Qt::Horizontal, QObject::tr("Date"));
+  model->setQuery("SELECT* FROM Contrat");
+  model->setHeaderData(0, Qt::Horizontal, QObject::tr("numero du contrat"));
+  model->setHeaderData(1, Qt::Horizontal, QObject::tr("prix d'un element"));
+  model->setHeaderData(2, Qt::Horizontal, QObject::tr("Prix Total"));
+  model->setHeaderData(3, Qt::Horizontal, QObject::tr("Type"));
+  model->setHeaderData(4, Qt::Horizontal, QObject::tr("Quantite "));
+  model->setHeaderData(5, Qt::Horizontal, QObject::tr("Date"));
+  model->setHeaderData(6, Qt::Horizontal, QObject::tr("id client"));
+  model->setHeaderData(7, Qt::Horizontal, QObject::tr("Reference mat"));
 
 
   return  model;
@@ -109,8 +111,7 @@ bool Contrat::supprimer(QString )
     QSqlQuery query;
          query.prepare(" Delete from CONTRAT WHERE NUM_C=:NUM_C");
          query.bindValue(0, num);
-
-        return query.exec();
+         return query.exec();
 
 }
 
@@ -129,7 +130,8 @@ QSqlQueryModel* Contrat::trierc()
    model->setHeaderData(3, Qt::Horizontal, QObject::tr("TYPE"));
    model->setHeaderData(4, Qt::Horizontal, QObject::tr("QUANTITE "));
    model->setHeaderData(5, Qt::Horizontal, QObject::tr("DATEC"));
-
+   model->setHeaderData(6, Qt::Horizontal, QObject::tr("id client"));
+   model->setHeaderData(7, Qt::Horizontal, QObject::tr("Reference mat"));
 
   return  model;
 }
@@ -150,6 +152,8 @@ QSqlQueryModel *Contrat::rechercherc(QString chaine1){
        model->setHeaderData(3, Qt::Horizontal, QObject::tr("TYPE"));
        model->setHeaderData(4, Qt::Horizontal, QObject::tr("QUANTITE"));
        model->setHeaderData(5, Qt::Horizontal, QObject::tr("DATEC"));
+       model->setHeaderData(6, Qt::Horizontal, QObject::tr("id client"));
+       model->setHeaderData(7, Qt::Horizontal, QObject::tr("Reference mat"));
     return model;
 
 

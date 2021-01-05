@@ -107,7 +107,9 @@ void MainWindow::on_pushButton_10_clicked()
     int qte=ui->lineEdit_qte->text().toInt();
     float pt=ui->lineEdit_pt->text().toInt();
     float prix=ui->lineEdit_p->text().toInt();
-     Contrat co(num ,type,  prix , qte,  datec , pt);
+    QString idclient=ui->lineEdit_idclient->text();
+    QString REf_mat=ui->lineEdit_ref->text();
+     Contrat co(num ,type,  prix , qte,  datec , pt , idclient , REf_mat);
      bool test=co.ajouter();
      QMessageBox msgBox;
 
@@ -342,4 +344,26 @@ void MainWindow::on_print_clicked()
       QPrintDialog dialog(&printer,this);
       if (dialog.exec() == QDialog::Rejected) return ;
       ui->tabContrat->render(&printer);
+}
+
+void MainWindow::on_pushButton_29_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(7);
+}
+
+void MainWindow::on_pushButton_28_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+}
+
+
+
+void MainWindow::on_pushButton_27_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_pushButton_30_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(8);
 }

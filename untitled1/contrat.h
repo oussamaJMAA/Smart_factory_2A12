@@ -26,10 +26,10 @@ public:
     QSqlQueryModel * trierc();
     QSqlQueryModel *rechercherc(QString);
     Contrat();
-    Contrat(QString,QString,float,int,QDate,float);
+    Contrat(QString,QString,float,int,QDate,float,QString,QString);
 
 private:
-    QString num,type;
+    QString num,type,idclient,REF_mat;
     QDate datec;
     int qte;
     float pt,prix;
