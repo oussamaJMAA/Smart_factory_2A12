@@ -68,7 +68,25 @@ acceuil::acceuil(QWidget *parent) : QDialog(parent), ui(new Ui::acceuil)
 
  ui->control->setVisible(false);
       ui->affiche_mat->setSelectionBehavior(QAbstractItemView::SelectRows);
+QPixmap fathi("C:/Users/oussa/Desktop/test/IMG/sopal.png");
+  ui->logoo->setPixmap(fathi);
 
+      int w=ui->logoo->width();
+      int h=ui->logoo->height();
+      animation = new QPropertyAnimation(ui->logoo,"geometry");
+      animation->setDuration(10000);
+      animation->setStartValue(ui->logoo->geometry());
+      animation->setEndValue(QRect(0,20,w,h));
+
+      QEasingCurve curve;
+      curve.setType(QEasingCurve::OutBounce);
+      animation->setEasingCurve(curve);
+      //curve.setAmplitude(2.00);
+      curve.setOvershoot(1.30);
+      curve.setPeriod(0.50);
+      animation->setLoopCount(-1);
+
+      animation->start();
 
 
 
@@ -1188,8 +1206,9 @@ void acceuil::on_pushButton_4_clicked()
 
         QPainter painter(&pdf);
 
-        painter.setPen(Qt::blue);
-        painter.drawText(4000,400,"Information sur les materiaux ");
+        painter.setPen(Qt::red);
+        painter.setFont(QFont("Arial", 12));
+        painter.drawText(3000,400,"Information sur les materiaux ");
 
     QString ch1 =ui->lineEdit_31->text();
     QString ch2 =ui->lineEdit_14->text();
@@ -1199,14 +1218,14 @@ void acceuil::on_pushButton_4_clicked()
 
     QString date = ui->date_modifier->date().toString();
 
-        painter.setPen(Qt::blue);
+       painter.setPen(Qt::black);
+        painter.setFont(QFont("Arial", 12));
         painter.drawText(100,600,"Reference materiel: "+ch1);
-        painter.drawText(100,800,"Nom materiel : "+ch2);
-        painter.drawText(100,1000,"Quantite materiel : "+ch3);
-        painter.drawText(100,1200,"Prix unitaire  : "+ch4);
-        painter.drawText(100,1400,"Quantite dispo : "+ch5);
-        painter.drawText(100,1600,"date achat  : "+date);
-
+        painter.drawText(100,900,"Nom materiel : "+ch2);
+        painter.drawText(100,1200,"Quantite materiel : "+ch3);
+        painter.drawText(100,1500,"Prix unitaire  : "+ch4);
+        painter.drawText(100,1800,"Quantite dispo : "+ch5);
+        painter.drawText(100,2100,"date achat  : "+date);
 
         painter.end();
 

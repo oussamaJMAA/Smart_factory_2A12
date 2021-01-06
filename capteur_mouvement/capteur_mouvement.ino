@@ -1,44 +1,52 @@
+#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
-const int buttonpin=2 ; //Broche du capteur PIR
-const int ledpin=13 ; 
-const int nbmax=20;
-int buttonState = 0; 
-int i=0;
-int k=0;
-
-
+//char array1[]="Les Machines";
+//char array2[]="Tout les equippement sont marcher                               ";
+int tim=500;
+int buttonState = 0;
+char  data ; 
+int x ;
 
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+
+
 void setup() {
- pinMode(ledpin,OUTPUT); // la broche du led est mise en sortie 
- pinMode (buttonpin,INPUT) ; // la broche du capteur est mise en entree
+
+
 Serial.begin(9600);
+
+  
+  // put your setup code here, to run once:
   lcd.begin();
-  lcd.backlight();
+lcd.print("test test");
 }
 
 void loop() {
-buttonState= digitalRead(buttonpin); //lecture du capteur 
+  // put your main code here, to run repeatedly:
+ 
+ if(Serial.available())
+  {
+    data=Serial.read();
+   if(data=='1')
+   {
+    Serial.write('1');
+    
+    lcd.setCursor(4,0);
+    lcd.clear();
+    lcd.print("Tapis");
+    //lcd.clear();
+    lcd.setCursor(0,1);
+    }
+  
+  else if(data=='0')
+    {
+    lcd.clear();
+    lcd.print("wapana");
+    Serial.write('0');
+    }
+   }
+//Serial.print(
 
-
-
-  delay(500);
-if(buttonState==HIGH) // si quelquechose est detecte
-{
-  Serial.println("motion detected");
-digitalWrite(ledpin,HIGH); // on allume la LED
-k = k+1;
-if(k==nbmax){
-
-   lcd.clear();
-  lcd.print("Nombre Max Has Reached!");
-}
-else {
-Serial.println("motion ended");
-  digitalWrite(ledpin,LOW); // on eteint la LED
-}
-
-delay(500);
-}
 }
