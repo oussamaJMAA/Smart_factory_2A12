@@ -5,7 +5,7 @@
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent) , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap logo("C:/Users/oussa/Desktop/test/IMGlogo.png");
+    QPixmap logo("C:/Users/oussa/Desktop/test/IMG/logo.png");
 
 
 
@@ -92,8 +92,9 @@ void MainWindow::on_pushButton_clicked()
 
 }
 
+
+
 void MainWindow::on_exit_clicked()
 {
     this->close();
 }
-

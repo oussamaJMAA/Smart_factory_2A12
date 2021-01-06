@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1387</width>
-    <height>781</height>
+    <width>1803</width>
+    <height>1474</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -159,14 +159,124 @@ color:white;
   <property name="modal">
    <bool>false</bool>
   </property>
+  <widget class="QPushButton" name="deconnexion">
+   <property name="geometry">
+    <rect>
+     <x>1700</x>
+     <y>20</y>
+     <width>51</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    image: url(C:/Users/oussa/Downloads/Gestion personnel (1)/Integration/IMG/decnx.png);
+    subcontrol-position: right center;
+    subcontrol-origin: padding;
+    left: -2px;
+	border-radius:20px;background-color:transparent;
+
+
+}
+QPushButton:hover
+{
+background-color:transparent;
+    image: url(C:/Users/Nasreddine/Documents/FuseSmart/IMG/decnx.png);
+    subcontrol-position: right center;
+    subcontrol-origin: padding;
+    left: -2px;
+	border-bottom:2px solid rgb(0, 255, 255);
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="photo">
+   <property name="geometry">
+    <rect>
+     <x>1380</x>
+     <y>10</y>
+     <width>61</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#photo
+{
+    image: url(C:/Users/oussa/Downloads/Gestion personnel (1)/Integration/IMG/utilisateur.png);
+    subcontrol-position: right center;
+    subcontrol-origin: padding;
+    left: -2px;
+	border-radius:1px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="utilisateur_nom">
+   <property name="geometry">
+    <rect>
+     <x>1460</x>
+     <y>20</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>century</family>
+     <pointsize>-1</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+background:qlineargradient(spread:pad, x1:0, y1:0.471591, x2:1, y2:0.46, stop:0 rgba(42, 204, 61, 255), stop:1 rgba(215, 255, 82, 255));
+color :white;
+border-radius:10px;
+border-style:none;
+font-size:12px;
+font-style:Georgia ;
+}</string>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout"/>
+  </widget>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>50</y>
-     <width>1371</width>
-     <height>711</height>
+     <y>60</y>
+     <width>1920</width>
+     <height>1151</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1920</width>
+     <height>1000</height>
+    </size>
    </property>
    <property name="styleSheet">
     <string notr="true">QTabWidget
@@ -185,7 +295,7 @@ background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255,
     <enum>QTabWidget::Triangular</enum>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -202,7 +312,7 @@ background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255,
        <x>0</x>
        <y>10</y>
        <width>241</width>
-       <height>691</height>
+       <height>1000</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -998,627 +1108,13 @@ color:rgb(153, 238, 84);
       </property>
      </widget>
     </widget>
-    <widget class="QGroupBox" name="groupBox_afficherEmployes">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>-10</y>
-       <width>1111</width>
-       <height>701</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-background : rgb(166, 191, 43);
-color : white ;
-border-radius:5px;
-}
-QPushButton:hover
-{
-background:	rgb(255, 232, 103);
-border-radius:10px;
-}
-
-
-QGroupBox
-{
-
-background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(255, 255, 255, 255))
-;
-
-
-
-}</string>
-     </property>
-     <property name="title">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <widget class="QLabel" name="label_17">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>20</y>
-        <width>121</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>century</family>
-        <pointsize>-1</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string> Les Employés</string>
-      </property>
-     </widget>
-     <widget class="QTableView" name="tabemployeurs">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>110</y>
-        <width>681</width>
-        <height>541</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QFrame
-{
-background: rgb(56,58,89);
-border-radius:15px;
-}</string>
-      </property>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_4">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>80</y>
-        <width>341</width>
-        <height>281</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QGroupBox
-{
-background: rgb(209, 209, 209);
-border-radius:10px;
-
-}</string>
-      </property>
-      <property name="title">
-       <string/>
-      </property>
-      <widget class="QRadioButton" name="radioAfficherttemp">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>20</y>
-         <width>151</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Afficher Tous les employés</string>
-       </property>
-      </widget>
-      <widget class="QRadioButton" name="radiosuppemploye">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>140</y>
-         <width>131</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Supprimer un employé</string>
-       </property>
-      </widget>
-      <widget class="QRadioButton" name="radiomodifemploye">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>220</y>
-         <width>121</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Modifier Un employé</string>
-       </property>
-      </widget>
-      <widget class="QFrame" name="frame_3">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>170</y>
-         <width>261</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QFrame
-{
-
-border-radius:10px;
-border :2px solid green ;
-
-}
-</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QPushButton" name="SupprimerEmp">
-        <property name="geometry">
-         <rect>
-          <x>160</x>
-          <y>10</y>
-          <width>71</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Supprimer</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="supprimerEmp">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>10</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="maxLength">
-         <number>8</number>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="placeholderText">
-         <string>CIN</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QFrame" name="frame_4">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>50</y>
-         <width>261</width>
-         <height>81</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QFrame
-{
-
-border-radius:10px;
-border :2px solid green ;
-
-}
-</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QCheckBox" name="tri_emp">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>10</y>
-          <width>61</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Trier Nom</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="AfficherEmp">
-        <property name="geometry">
-         <rect>
-          <x>160</x>
-          <y>30</y>
-          <width>71</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Afficher</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="tri_emp_2">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>30</y>
-          <width>61</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Trier ID</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="tri_emp_3">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>50</y>
-          <width>81</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Trier Service</string>
-        </property>
-       </widget>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_6">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>80</y>
-        <width>681</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QGroupBox
-{
-background: rgb(209, 209, 209);
-border-radius:10px;
-
-}</string>
-      </property>
-      <property name="title">
-       <string/>
-      </property>
-      <widget class="QLineEdit" name="Linerechemp">
-       <property name="geometry">
-        <rect>
-         <x>290</x>
-         <y>6</y>
-         <width>121</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="maxLength">
-        <number>8</number>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="placeholderText">
-        <string>Rechercher</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QFrame" name="frame_9">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>340</y>
-        <width>341</width>
-        <height>341</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QFrame
-{
-background: rgb(209, 209, 209);
-border-radius:10px;
-border:0px;
-}
-</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QFrame" name="frame_10">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>10</y>
-         <width>261</width>
-         <height>311</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QFrame
-{
-
-border-radius:10px;
-border :2px solid green ;
-}
-QLabel
-{
-border:0px;
-}</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QLineEdit" name="modifierEmp_CIN_chercher">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>10</y>
-          <width>181</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="maxLength">
-         <number>8</number>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="placeholderText">
-         <string>CIN</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="ModifierEmp">
-        <property name="geometry">
-         <rect>
-          <x>160</x>
-          <y>270</y>
-          <width>71</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Modifier</string>
-        </property>
-       </widget>
-       <widget class="QDateEdit" name="modifierDate_Nais">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>200</y>
-          <width>141</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="readOnly">
-         <bool>false</bool>
-        </property>
-        <property name="buttonSymbols">
-         <enum>QAbstractSpinBox::PlusMinus</enum>
-        </property>
-        <property name="dateTime">
-         <datetime>
-          <hour>0</hour>
-          <minute>0</minute>
-          <second>0</second>
-          <year>1950</year>
-          <month>12</month>
-          <day>24</day>
-         </datetime>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_20">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>200</y>
-          <width>81</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Date Nais :</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_24">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>230</y>
-          <width>101</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Service    :</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="modifierEmp_prenom">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>40</y>
-          <width>181</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="placeholderText">
-         <string>Prenom</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="modifierEmp_nom">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>70</y>
-          <width>181</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="placeholderText">
-         <string>Nom</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="modifierEmp_adresse">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>100</y>
-          <width>181</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="placeholderText">
-         <string>Adresse</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="modifierEmp_tel">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>130</y>
-          <width>181</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="placeholderText">
-         <string>N° Tel</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="modifierEmp_email">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>160</y>
-          <width>181</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="placeholderText">
-         <string>E-mail</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_modifieremp">
-        <property name="geometry">
-         <rect>
-          <x>113</x>
-          <y>230</y>
-          <width>144</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="editable">
-         <bool>false</bool>
-        </property>
-        <property name="currentText">
-         <string/>
-        </property>
-        <property name="currentIndex">
-         <number>-1</number>
-        </property>
-        <property name="sizeAdjustPolicy">
-         <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
-        </property>
-        <property name="duplicatesEnabled">
-         <bool>false</bool>
-        </property>
-        <property name="frame">
-         <bool>true</bool>
-        </property>
-        <property name="placeholderText" stdset="0">
-         <string/>
-        </property>
-        <item>
-         <property name="text">
-          <string>Technicien</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Assistance administrative</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Ingénieur</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Secrétaire</string>
-         </property>
-        </item>
-       </widget>
-       <zorder>ModifierEmp</zorder>
-       <zorder>modifierEmp_CIN_chercher</zorder>
-       <zorder>modifierDate_Nais</zorder>
-       <zorder>label_20</zorder>
-       <zorder>label_24</zorder>
-       <zorder>modifierEmp_prenom</zorder>
-       <zorder>modifierEmp_nom</zorder>
-       <zorder>modifierEmp_adresse</zorder>
-       <zorder>modifierEmp_tel</zorder>
-       <zorder>modifierEmp_email</zorder>
-       <zorder>comboBox_modifieremp</zorder>
-      </widget>
-     </widget>
-    </widget>
     <widget class="QGroupBox" name="groupBox_ajouterConge">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>0</y>
+       <x>240</x>
+       <y>10</y>
        <width>1111</width>
-       <height>691</height>
+       <height>1021</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -2179,18 +1675,17 @@ color:transparent;
        <string>AjouterCongé</string>
       </property>
      </widget>
-    </widget>
-    <widget class="QGroupBox" name="groupBox_afficherConges">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>-10</y>
-       <width>1111</width>
-       <height>701</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
+     <widget class="QGroupBox" name="groupBox_afficherConges">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>-10</y>
+        <width>1111</width>
+        <height>1041</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
 {
 background : rgb(166, 191, 43);
 color : white ;
@@ -2212,121 +1707,121 @@ background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255,
 
 
 }</string>
-     </property>
-     <property name="title">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <widget class="QLabel" name="label_22">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>20</y>
-        <width>111</width>
-        <height>41</height>
-       </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>century</family>
-        <pointsize>-1</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+      <property name="title">
+       <string/>
       </property>
-      <property name="text">
-       <string> Les Congés</string>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
-     </widget>
-     <widget class="QTableView" name="tabConge">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>110</y>
-        <width>681</width>
-        <height>541</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QFrame
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>20</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>century</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string> Les Congés</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="tabConge">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>110</y>
+         <width>681</width>
+         <height>541</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame
 {
 background: rgb(56,58,89);
 border-radius:15px;
 }</string>
-      </property>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_7">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>80</y>
-        <width>341</width>
-        <height>251</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QGroupBox
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_7">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>341</width>
+         <height>251</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox
 {
 background: rgb(209, 209, 209);
 border-radius:10px;
 
 }</string>
-      </property>
-      <property name="title">
-       <string/>
-      </property>
-      <widget class="QRadioButton" name="radioAfficherttcong">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>20</y>
-         <width>151</width>
-         <height>21</height>
-        </rect>
        </property>
-       <property name="text">
-        <string>Afficher Tous les Congés</string>
+       <property name="title">
+        <string/>
        </property>
-      </widget>
-      <widget class="QRadioButton" name="radiosuppconge">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>100</y>
-         <width>131</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Supprimer un Congé</string>
-       </property>
-      </widget>
-      <widget class="QRadioButton" name="radiomodifconge">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>180</y>
-         <width>121</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Modifier Un employé</string>
-       </property>
-      </widget>
-      <widget class="QFrame" name="frame_5">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>130</y>
-         <width>261</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QFrame
+       <widget class="QRadioButton" name="radioAfficherttcong">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>20</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Afficher Tous les Congés</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radiosuppconge">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>100</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Supprimer un Congé</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radiomodifconge">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>180</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Modifier Un employé</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_5">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>130</y>
+          <width>261</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame
 {
 
 border-radius:10px;
@@ -2334,31 +1829,137 @@ border :2px solid green ;
 
 }
 </string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QPushButton" name="SupprimerCong">
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="SupprimerCong">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>10</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Supprimer</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="supprimerCong">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>10</y>
+           <width>101</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>ID</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_6">
         <property name="geometry">
          <rect>
-          <x>160</x>
-          <y>10</y>
-          <width>71</width>
-          <height>21</height>
+          <x>50</x>
+          <y>50</y>
+          <width>261</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame
+{
+
+border-radius:10px;
+border :2px solid green ;
+
+}
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QCheckBox" name="tri_cong">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>10</y>
+           <width>61</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Trier</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="AfficherCong">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>10</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Afficher</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_8">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>80</y>
+         <width>681</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox
+{
+background: rgb(209, 209, 209);
+border-radius:10px;
+
+}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QPushButton" name="rechercherCong">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>6</y>
+          <width>61</width>
+          <height>20</height>
          </rect>
         </property>
         <property name="text">
-         <string>Supprimer</string>
+         <string>Rechercher</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="supprimerCong">
+       <widget class="QLineEdit" name="LinerechCong">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>10</y>
+          <x>300</x>
+          <y>6</y>
           <width>101</width>
           <height>20</height>
          </rect>
@@ -2370,26 +1971,25 @@ border :2px solid green ;
          <set>Qt::AlignCenter</set>
         </property>
         <property name="placeholderText">
-         <string>ID</string>
+         <string>CIN</string>
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="frame_6">
+      <widget class="QFrame" name="frame_7">
        <property name="geometry">
         <rect>
-         <x>50</x>
-         <y>50</y>
-         <width>261</width>
-         <height>41</height>
+         <x>20</x>
+         <y>280</y>
+         <width>341</width>
+         <height>281</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">QFrame
 {
-
+background: rgb(209, 209, 209);
 border-radius:10px;
-border :2px solid green ;
-
+border:0px;
 }
 </string>
        </property>
@@ -2399,122 +1999,17 @@ border :2px solid green ;
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QCheckBox" name="tri_cong">
+       <widget class="QFrame" name="frame_8">
         <property name="geometry">
          <rect>
-          <x>70</x>
+          <x>50</x>
           <y>10</y>
-          <width>61</width>
-          <height>21</height>
+          <width>261</width>
+          <height>231</height>
          </rect>
         </property>
-        <property name="text">
-         <string>Trier</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="AfficherCong">
-        <property name="geometry">
-         <rect>
-          <x>160</x>
-          <y>10</y>
-          <width>71</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Afficher</string>
-        </property>
-       </widget>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_8">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>80</y>
-        <width>681</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QGroupBox
-{
-background: rgb(209, 209, 209);
-border-radius:10px;
-
-}</string>
-      </property>
-      <property name="title">
-       <string/>
-      </property>
-      <widget class="QPushButton" name="rechercherCong">
-       <property name="geometry">
-        <rect>
-         <x>410</x>
-         <y>6</y>
-         <width>61</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Rechercher</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="LinerechCong">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>6</y>
-         <width>101</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="maxLength">
-        <number>8</number>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="placeholderText">
-        <string>CIN</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QFrame" name="frame_7">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>280</y>
-        <width>341</width>
-        <height>281</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QFrame
-{
-background: rgb(209, 209, 209);
-border-radius:10px;
-border:0px;
-}
-</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QFrame" name="frame_8">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>10</y>
-         <width>261</width>
-         <height>231</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QFrame
+        <property name="styleSheet">
+         <string notr="true">QFrame
 {
 
 border-radius:10px;
@@ -2524,206 +2019,820 @@ QLabel
 {
 border:0px;
 }</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLineEdit" name="modifierCong_ID">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>10</y>
+           <width>181</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>ID</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="ModifierCong">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>200</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Modifier</string>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="modifierDate_deb">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>60</y>
+           <width>141</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="dateTime">
+          <datetime>
+           <hour>0</hour>
+           <minute>0</minute>
+           <second>0</second>
+           <year>1950</year>
+           <month>12</month>
+           <day>24</day>
+          </datetime>
+         </property>
+         <property name="displayFormat">
+          <string>yyyy/MM/dd</string>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="modifierDate_fin">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>111</y>
+           <width>141</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="dateTime">
+          <datetime>
+           <hour>0</hour>
+           <minute>0</minute>
+           <second>0</second>
+           <year>1950</year>
+           <month>12</month>
+           <day>24</day>
+          </datetime>
+         </property>
+         <property name="displayFormat">
+          <string>yyyy/MM/dd</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>91</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Date Debut  :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_18">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>110</y>
+           <width>91</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Date Fin       :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_19">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>160</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Type Congé :</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_modifierconge">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>160</y>
+           <width>144</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century</family>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>-1</number>
+         </property>
+         <property name="insertPolicy">
+          <enum>QComboBox::InsertAtBottom</enum>
+         </property>
+         <property name="duplicatesEnabled">
+          <bool>false</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>payé</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>sans solde</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>annuel</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>maladie</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_afficherEmployes">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>1511</width>
+         <height>1021</height>
+        </rect>
        </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+background : rgb(166, 191, 43);
+color : white ;
+border-radius:5px;
+}
+QPushButton:hover
+{
+background:	rgb(255, 232, 103);
+border-radius:10px;
+}
+
+
+QGroupBox
+{
+
+background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(255, 255, 255, 255))
+;
+
+
+
+}</string>
        </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+       <property name="title">
+        <string/>
        </property>
-       <widget class="QLineEdit" name="modifierCong_ID">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <widget class="QLabel" name="label_17">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>10</y>
-          <width>181</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="placeholderText">
-         <string>ID</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="ModifierCong">
-        <property name="geometry">
-         <rect>
-          <x>160</x>
-          <y>200</y>
-          <width>71</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Modifier</string>
-        </property>
-       </widget>
-       <widget class="QDateEdit" name="modifierDate_deb">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>60</y>
-          <width>141</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="dateTime">
-         <datetime>
-          <hour>0</hour>
-          <minute>0</minute>
-          <second>0</second>
-          <year>1950</year>
-          <month>12</month>
-          <day>24</day>
-         </datetime>
-        </property>
-        <property name="displayFormat">
-         <string>yyyy/MM/dd</string>
-        </property>
-       </widget>
-       <widget class="QDateEdit" name="modifierDate_fin">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>111</y>
-          <width>141</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="dateTime">
-         <datetime>
-          <hour>0</hour>
-          <minute>0</minute>
-          <second>0</second>
-          <year>1950</year>
-          <month>12</month>
-          <day>24</day>
-         </datetime>
-        </property>
-        <property name="displayFormat">
-         <string>yyyy/MM/dd</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_15">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>60</y>
-          <width>91</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Date Debut  :</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_18">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>110</y>
-          <width>91</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Date Fin       :</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_19">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>160</y>
-          <width>101</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Type Congé :</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_modifierconge">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>160</y>
-          <width>144</width>
-          <height>21</height>
+          <x>490</x>
+          <y>20</y>
+          <width>121</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>century</family>
-          <weight>50</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-          <underline>false</underline>
-          <strikeout>false</strikeout>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
+        <property name="text">
+         <string> Les Employés</string>
         </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
+       </widget>
+       <widget class="QTableView" name="tabemployeurs">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>110</y>
+          <width>681</width>
+          <height>541</height>
+         </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">QFrame
+{
+background: rgb(56,58,89);
+border-radius:15px;
+}</string>
         </property>
-        <property name="currentText">
+       </widget>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>341</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox
+{
+background: rgb(209, 209, 209);
+border-radius:10px;
+
+}</string>
+        </property>
+        <property name="title">
          <string/>
         </property>
-        <property name="currentIndex">
-         <number>-1</number>
+        <widget class="QRadioButton" name="radioAfficherttemp">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>20</y>
+           <width>151</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Afficher Tous les employés</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radiosuppemploye">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>140</y>
+           <width>131</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Supprimer un employé</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radiomodifemploye">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>220</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Modifier Un employé</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_3">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>170</y>
+           <width>261</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame
+{
+
+border-radius:10px;
+border :2px solid green ;
+
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="SupprimerEmp">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>10</y>
+            <width>71</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Supprimer</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="supprimerEmp">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>101</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="maxLength">
+           <number>8</number>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>CIN</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_4">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>50</y>
+           <width>261</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame
+{
+
+border-radius:10px;
+border :2px solid green ;
+
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QCheckBox" name="tri_emp">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>91</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Trier Nom</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="AfficherEmp">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>30</y>
+            <width>71</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Afficher</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="tri_emp_2">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>81</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Trier ID</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="tri_emp_3">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>101</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Trier Service</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>80</y>
+          <width>681</width>
+          <height>31</height>
+         </rect>
         </property>
-        <property name="insertPolicy">
-         <enum>QComboBox::InsertAtBottom</enum>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox
+{
+background: rgb(209, 209, 209);
+border-radius:10px;
+
+}</string>
         </property>
-        <property name="duplicatesEnabled">
-         <bool>false</bool>
+        <property name="title">
+         <string/>
         </property>
-        <item>
-         <property name="text">
-          <string>payé</string>
+        <widget class="QLineEdit" name="Linerechemp">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>6</y>
+           <width>121</width>
+           <height>20</height>
+          </rect>
          </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>sans solde</string>
+         <property name="maxLength">
+          <number>8</number>
          </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>annuel</string>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>maladie</string>
+         <property name="placeholderText">
+          <string>Rechercher</string>
          </property>
-        </item>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_9">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>340</y>
+          <width>341</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame
+{
+background: rgb(209, 209, 209);
+border-radius:10px;
+border:0px;
+}
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QFrame" name="frame_10">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>10</y>
+           <width>261</width>
+           <height>311</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame
+{
+
+border-radius:10px;
+border :2px solid green ;
+}
+QLabel
+{
+border:0px;
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLineEdit" name="modifierEmp_CIN_chercher">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="maxLength">
+           <number>8</number>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>CIN</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ModifierEmp">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>270</y>
+            <width>71</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Modifier</string>
+          </property>
+         </widget>
+         <widget class="QDateEdit" name="modifierDate_Nais">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>200</y>
+            <width>141</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::PlusMinus</enum>
+          </property>
+          <property name="dateTime">
+           <datetime>
+            <hour>0</hour>
+            <minute>0</minute>
+            <second>0</second>
+            <year>1950</year>
+            <month>12</month>
+            <day>24</day>
+           </datetime>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_20">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>200</y>
+            <width>81</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Date Nais :</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_24">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>230</y>
+            <width>101</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Service    :</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="modifierEmp_prenom">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>40</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>Prenom</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="modifierEmp_nom">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>70</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>Nom</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="modifierEmp_adresse">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>100</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>Adresse</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="modifierEmp_tel">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>130</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>N° Tel</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="modifierEmp_email">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>160</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>E-mail</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_modifieremp">
+          <property name="geometry">
+           <rect>
+            <x>113</x>
+            <y>230</y>
+            <width>144</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="currentText">
+           <string/>
+          </property>
+          <property name="currentIndex">
+           <number>-1</number>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
+          </property>
+          <property name="duplicatesEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="frame">
+           <bool>true</bool>
+          </property>
+          <property name="placeholderText" stdset="0">
+           <string/>
+          </property>
+          <item>
+           <property name="text">
+            <string>Technicien</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Assistance administrative</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Ingénieur</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Secrétaire</string>
+           </property>
+          </item>
+         </widget>
+         <zorder>ModifierEmp</zorder>
+         <zorder>modifierEmp_CIN_chercher</zorder>
+         <zorder>modifierDate_Nais</zorder>
+         <zorder>label_20</zorder>
+         <zorder>label_24</zorder>
+         <zorder>modifierEmp_prenom</zorder>
+         <zorder>modifierEmp_nom</zorder>
+         <zorder>modifierEmp_adresse</zorder>
+         <zorder>modifierEmp_tel</zorder>
+         <zorder>modifierEmp_email</zorder>
+         <zorder>comboBox_modifieremp</zorder>
+        </widget>
        </widget>
       </widget>
+      <zorder>label_22</zorder>
+      <zorder>groupBox_7</zorder>
+      <zorder>tabConge</zorder>
+      <zorder>groupBox_8</zorder>
+      <zorder>frame_7</zorder>
+      <zorder>groupBox_afficherEmployes</zorder>
      </widget>
-     <zorder>label_22</zorder>
-     <zorder>groupBox_7</zorder>
-     <zorder>tabConge</zorder>
-     <zorder>groupBox_8</zorder>
-     <zorder>frame_7</zorder>
     </widget>
     <zorder>groupBox_Ajouter</zorder>
-    <zorder>groupBox_afficherConges</zorder>
     <zorder>groupBox_ajouterConge</zorder>
-    <zorder>groupBox_afficherEmployes</zorder>
     <zorder>groupBox</zorder>
    </widget>
    <widget class="QWidget" name="tab_2">
@@ -2734,9 +2843,9 @@ border:0px;
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>10</y>
-       <width>1371</width>
-       <height>681</height>
+       <y>0</y>
+       <width>1781</width>
+       <height>1081</height>
       </rect>
      </property>
      <property name="font">
@@ -2770,7 +2879,7 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
          <x>0</x>
          <y>-30</y>
          <width>241</width>
-         <height>711</height>
+         <height>981</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -2854,44 +2963,6 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="logo">
-       <property name="geometry">
-        <rect>
-         <x>900</x>
-         <y>60</y>
-         <width>141</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color:rgba(0,0,0,0);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>:/photos/IMG/image.png</pixmap>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_23">
-       <property name="geometry">
-        <rect>
-         <x>430</x>
-         <y>90</y>
-         <width>341</width>
-         <height>111</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color:rgba(0,0,0,0);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>:/photos/IMG/sopal.png</pixmap>
-       </property>
-      </widget>
       <widget class="QPushButton" name="pushButton_5">
        <property name="geometry">
         <rect>
@@ -2923,8 +2994,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_15">
        <property name="geometry">
         <rect>
-         <x>477</x>
-         <y>161</y>
+         <x>790</x>
+         <y>180</y>
          <width>205</width>
          <height>27</height>
         </rect>
@@ -2933,8 +3004,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_25">
        <property name="geometry">
         <rect>
-         <x>351</x>
-         <y>194</y>
+         <x>470</x>
+         <y>270</y>
          <width>120</width>
          <height>21</height>
         </rect>
@@ -2946,8 +3017,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_26">
        <property name="geometry">
         <rect>
-         <x>351</x>
-         <y>326</y>
+         <x>520</x>
+         <y>560</y>
          <width>99</width>
          <height>21</height>
         </rect>
@@ -2959,8 +3030,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_27">
        <property name="geometry">
         <rect>
-         <x>324</x>
-         <y>161</y>
+         <x>460</x>
+         <y>190</y>
          <width>131</width>
          <height>21</height>
         </rect>
@@ -2972,8 +3043,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_28">
        <property name="geometry">
         <rect>
-         <x>330</x>
-         <y>260</y>
+         <x>520</x>
+         <y>420</y>
          <width>111</width>
          <height>21</height>
         </rect>
@@ -2985,8 +3056,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_16">
        <property name="geometry">
         <rect>
-         <x>477</x>
-         <y>194</y>
+         <x>790</x>
+         <y>260</y>
          <width>205</width>
          <height>27</height>
         </rect>
@@ -2995,8 +3066,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_17">
        <property name="geometry">
         <rect>
-         <x>477</x>
-         <y>227</y>
+         <x>800</x>
+         <y>340</y>
          <width>205</width>
          <height>27</height>
         </rect>
@@ -3005,8 +3076,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_29">
        <property name="geometry">
         <rect>
-         <x>290</x>
-         <y>230</y>
+         <x>470</x>
+         <y>360</y>
          <width>181</width>
          <height>21</height>
         </rect>
@@ -3018,8 +3089,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_30">
        <property name="geometry">
         <rect>
-         <x>351</x>
-         <y>293</y>
+         <x>530</x>
+         <y>490</y>
          <width>75</width>
          <height>21</height>
         </rect>
@@ -3031,8 +3102,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_18">
        <property name="geometry">
         <rect>
-         <x>477</x>
-         <y>260</y>
+         <x>810</x>
+         <y>410</y>
          <width>205</width>
          <height>27</height>
         </rect>
@@ -3041,8 +3112,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_19">
        <property name="geometry">
         <rect>
-         <x>477</x>
-         <y>293</y>
+         <x>810</x>
+         <y>490</y>
          <width>205</width>
          <height>27</height>
         </rect>
@@ -3051,8 +3122,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="pushButton_16">
        <property name="geometry">
         <rect>
-         <x>740</x>
-         <y>198</y>
+         <x>1130</x>
+         <y>280</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -3064,8 +3135,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="pushButton_17">
        <property name="geometry">
         <rect>
-         <x>740</x>
-         <y>234</y>
+         <x>1130</x>
+         <y>360</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -3077,8 +3148,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="pushButton_18">
        <property name="geometry">
         <rect>
-         <x>740</x>
-         <y>270</y>
+         <x>1130</x>
+         <y>460</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -3122,8 +3193,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QDateEdit" name="date">
        <property name="geometry">
         <rect>
-         <x>490</x>
-         <y>330</y>
+         <x>830</x>
+         <y>560</y>
          <width>110</width>
          <height>22</height>
         </rect>
@@ -3152,13 +3223,42 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         <bool>true</bool>
        </property>
       </widget>
+      <widget class="QLabel" name="label_58">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>300</y>
+         <width>56</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="control">
+       <property name="geometry">
+        <rect>
+         <x>760</x>
+         <y>300</y>
+         <width>301</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:red ;</string>
+       </property>
+       <property name="text">
+        <string>Le nom doit être composé par que des lettres !</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="page_5">
       <widget class="QPushButton" name="supprimer_2">
        <property name="geometry">
         <rect>
-         <x>350</x>
-         <y>370</y>
+         <x>880</x>
+         <y>570</y>
          <width>99</width>
          <height>30</height>
         </rect>
@@ -3177,8 +3277,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="quitter_2">
        <property name="geometry">
         <rect>
-         <x>500</x>
-         <y>370</y>
+         <x>1010</x>
+         <y>570</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -3197,8 +3297,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="modifier_2">
        <property name="geometry">
         <rect>
-         <x>60</x>
-         <y>370</y>
+         <x>570</x>
+         <y>570</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -3217,8 +3317,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="supprimer_4">
        <property name="geometry">
         <rect>
-         <x>200</x>
-         <y>370</y>
+         <x>730</x>
+         <y>570</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -3234,24 +3334,11 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         <string>Trier</string>
        </property>
       </widget>
-      <widget class="QTableView" name="affiche_mat">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>30</y>
-         <width>811</width>
-         <height>321</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color:black ;</string>
-       </property>
-      </widget>
       <widget class="QLineEdit" name="rechercher_ref">
        <property name="geometry">
         <rect>
-         <x>610</x>
-         <y>0</y>
+         <x>1140</x>
+         <y>20</y>
          <width>205</width>
          <height>27</height>
         </rect>
@@ -3263,8 +3350,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="calcul">
        <property name="geometry">
         <rect>
-         <x>370</x>
-         <y>510</y>
+         <x>800</x>
+         <y>740</y>
          <width>113</width>
          <height>22</height>
         </rect>
@@ -3273,8 +3360,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="calcul2">
        <property name="geometry">
         <rect>
-         <x>370</x>
-         <y>580</y>
+         <x>810</x>
+         <y>880</y>
          <width>113</width>
          <height>22</height>
         </rect>
@@ -3283,8 +3370,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_55">
        <property name="geometry">
         <rect>
-         <x>200</x>
-         <y>510</y>
+         <x>500</x>
+         <y>740</y>
          <width>111</width>
          <height>21</height>
         </rect>
@@ -3296,8 +3383,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_56">
        <property name="geometry">
         <rect>
-         <x>190</x>
-         <y>580</y>
+         <x>470</x>
+         <y>860</y>
          <width>151</width>
          <height>21</height>
         </rect>
@@ -3309,11 +3396,24 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_57">
        <property name="geometry">
         <rect>
-         <x>100</x>
-         <y>460</y>
-         <width>651</width>
-         <height>21</height>
+         <x>440</x>
+         <y>630</y>
+         <width>1011</width>
+         <height>71</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>14</pointsize>
+         <weight>9</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color : rgb(156, 107, 255) ; 
+font: 75 14pt &quot;MS Shell Dlg 2&quot; ; </string>
        </property>
        <property name="text">
         <string>Sélectionnez la reference pour afficher la somme de la quantite et la quantite restante du materiel</string>
@@ -3322,8 +3422,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="pushButton_3">
        <property name="geometry">
         <rect>
-         <x>770</x>
-         <y>500</y>
+         <x>1480</x>
+         <y>700</y>
          <width>191</width>
          <height>41</height>
         </rect>
@@ -3332,8 +3432,38 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         <string>Afficher les Statistiques</string>
        </property>
       </widget>
+      <widget class="QTableView" name="affiche_mat">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>70</y>
+         <width>971</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame
+{
+background: rgb(56,58,89);
+border-radius:15px;
+}</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>1500</x>
+         <y>540</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Imprimer</string>
+       </property>
+      </widget>
      </widget>
-     <widget class="QWidget" name="page_10">
+     <widget class="QWidget" name="ModifierMateriaux">
       <widget class="QLineEdit" name="lineEdit_12">
        <property name="geometry">
         <rect>
@@ -3694,10 +3824,10 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
     <widget class="QStackedWidget" name="stackedWidget_2">
      <property name="geometry">
       <rect>
-       <x>-10</x>
-       <y>10</y>
-       <width>1351</width>
-       <height>701</height>
+       <x>0</x>
+       <y>0</y>
+       <width>1751</width>
+       <height>1021</height>
       </rect>
      </property>
      <property name="font">
@@ -3722,20 +3852,40 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
 }</string>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="page_3">
+      <widget class="QLabel" name="logo_6">
+       <property name="geometry">
+        <rect>
+         <x>890</x>
+         <y>60</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgba(0,0,0,0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/photos/IMG/image.png</pixmap>
+       </property>
+      </widget>
       <widget class="QFrame" name="frame_12">
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-50</y>
+         <y>-40</y>
          <width>241</width>
-         <height>731</height>
+         <height>1131</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background :qlineargradient(spread:pad, x1:0.533, y1:1, x2:0.538, y2:0.642409, stop:0 rgba(13, 255, 0, 255), stop:1 rgba(23, 27, 89, 255));
+        <string notr="true">
+background :qlineargradient(spread:pad, x1:0.533, y1:1, x2:0.538, y2:0.642409, stop:0 rgba(13, 255, 0, 255), stop:1 rgba(23, 27, 89, 255));
 border :0px;
 </string>
        </property>
@@ -3745,45 +3895,11 @@ border :0px;
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QPushButton" name="pushButton_19">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>220</y>
-          <width>211</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">/*background-color:#C70039;
-color:white;*/
-QPushButton
-{
-background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(22, 85,110, 255), stop:1 rgba(95, 196, 208, 255));
-border-radius:15px;
-color:white;
-}
-QPushButton:hover
-{
-background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(95, 196, 208, 255), stop:1 rgba(22, 85,110, 255))
-}</string>
-        </property>
-        <property name="text">
-         <string>Ajouter un fournisseur</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="pushButton_20">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>420</y>
+          <x>10</x>
+          <y>580</y>
           <width>211</width>
           <height>41</height>
          </rect>
@@ -3814,52 +3930,48 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
          <string>Afficher un fournisseur</string>
         </property>
        </widget>
-      </widget>
-      <widget class="QLabel" name="sopal">
-       <property name="geometry">
-        <rect>
-         <x>430</x>
-         <y>160</y>
-         <width>341</width>
-         <height>111</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color:rgba(0,0,0,0);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>:/photos/IMG/sopal.png</pixmap>
-       </property>
-      </widget>
-      <widget class="QLabel" name="logo_6">
-       <property name="geometry">
-        <rect>
-         <x>890</x>
-         <y>60</y>
-         <width>141</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color:rgba(0,0,0,0);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>:/photos/IMG/image.png</pixmap>
-       </property>
+       <widget class="QPushButton" name="pushButton_19">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>290</y>
+          <width>211</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*background-color:#C70039;
+color:white;*/
+QPushButton
+{
+background : qlineargradient(spread:pad, x1:0.467, y1:0, x2:0.482, y2:1, stop:0 rgba(22, 85,110, 255), stop:1 rgba(95, 196, 208, 255));
+border-radius:15px;
+color:white;
+}
+QPushButton:hover
+{
+background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, stop:0 rgba(95, 196, 208, 255), stop:1 rgba(22, 85,110, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter un fournisseur</string>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="page_4">
       <widget class="QPushButton" name="pushButton_21">
        <property name="geometry">
         <rect>
-         <x>751</x>
-         <y>360</y>
+         <x>1190</x>
+         <y>466</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -3871,8 +3983,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_41">
        <property name="geometry">
         <rect>
-         <x>271</x>
-         <y>237</y>
+         <x>470</x>
+         <y>279</y>
          <width>231</width>
          <height>20</height>
         </rect>
@@ -3884,8 +3996,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_22">
        <property name="geometry">
         <rect>
-         <x>461</x>
-         <y>242</y>
+         <x>790</x>
+         <y>210</y>
          <width>161</width>
          <height>21</height>
         </rect>
@@ -3894,8 +4006,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_42">
        <property name="geometry">
         <rect>
-         <x>271</x>
-         <y>352</y>
+         <x>460</x>
+         <y>440</y>
          <width>181</width>
          <height>21</height>
         </rect>
@@ -3907,8 +4019,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_43">
        <property name="geometry">
         <rect>
-         <x>271</x>
-         <y>259</y>
+         <x>480</x>
+         <y>210</y>
          <width>161</width>
          <height>31</height>
         </rect>
@@ -3920,8 +4032,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_23">
        <property name="geometry">
         <rect>
-         <x>461</x>
-         <y>325</y>
+         <x>790</x>
+         <y>380</y>
          <width>161</width>
          <height>22</height>
         </rect>
@@ -3930,8 +4042,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_24">
        <property name="geometry">
         <rect>
-         <x>461</x>
-         <y>353</y>
+         <x>790</x>
+         <y>440</y>
          <width>161</width>
          <height>22</height>
         </rect>
@@ -3940,8 +4052,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="pushButton_22">
        <property name="geometry">
         <rect>
-         <x>751</x>
-         <y>288</y>
+         <x>1190</x>
+         <y>394</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -3969,8 +4081,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_44">
        <property name="geometry">
         <rect>
-         <x>271</x>
-         <y>325</y>
+         <x>460</x>
+         <y>380</y>
          <width>181</width>
          <height>21</height>
         </rect>
@@ -3998,8 +4110,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_25">
        <property name="geometry">
         <rect>
-         <x>461</x>
-         <y>297</y>
+         <x>790</x>
+         <y>330</y>
          <width>161</width>
          <height>22</height>
         </rect>
@@ -4008,8 +4120,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_26">
        <property name="geometry">
         <rect>
-         <x>461</x>
-         <y>269</y>
+         <x>790</x>
+         <y>270</y>
          <width>161</width>
          <height>22</height>
         </rect>
@@ -4018,8 +4130,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="pushButton_23">
        <property name="geometry">
         <rect>
-         <x>751</x>
-         <y>324</y>
+         <x>1190</x>
+         <y>430</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -4031,8 +4143,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_46">
        <property name="geometry">
         <rect>
-         <x>270</x>
-         <y>300</y>
+         <x>460</x>
+         <y>330</y>
          <width>181</width>
          <height>16</height>
         </rect>
@@ -4044,8 +4156,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLineEdit" name="lineEdit_28">
        <property name="geometry">
         <rect>
-         <x>461</x>
-         <y>390</y>
+         <x>790</x>
+         <y>510</y>
          <width>161</width>
          <height>22</height>
         </rect>
@@ -4054,8 +4166,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QLabel" name="label_47">
        <property name="geometry">
         <rect>
-         <x>280</x>
-         <y>380</y>
+         <x>470</x>
+         <y>500</y>
          <width>181</width>
          <height>31</height>
         </rect>
@@ -4066,24 +4178,11 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       </widget>
      </widget>
      <widget class="QWidget" name="page_12">
-      <widget class="QTableView" name="tableView_2">
-       <property name="geometry">
-        <rect>
-         <x>160</x>
-         <y>120</y>
-         <width>781</width>
-         <height>341</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color:black </string>
-       </property>
-      </widget>
       <widget class="QLineEdit" name="rechercher_id">
        <property name="geometry">
         <rect>
-         <x>640</x>
-         <y>470</y>
+         <x>1020</x>
+         <y>50</y>
          <width>231</width>
          <height>31</height>
         </rect>
@@ -4095,8 +4194,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="trier">
        <property name="geometry">
         <rect>
-         <x>290</x>
-         <y>471</y>
+         <x>720</x>
+         <y>670</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -4118,8 +4217,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="modifier_3">
        <property name="geometry">
         <rect>
-         <x>191</x>
-         <y>471</y>
+         <x>500</x>
+         <y>670</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -4141,8 +4240,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="supprimer_3">
        <property name="geometry">
         <rect>
-         <x>389</x>
-         <y>471</y>
+         <x>950</x>
+         <y>670</y>
          <width>99</width>
          <height>30</height>
         </rect>
@@ -4164,8 +4263,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
       <widget class="QPushButton" name="quitter_3">
        <property name="geometry">
         <rect>
-         <x>500</x>
-         <y>470</y>
+         <x>1480</x>
+         <y>850</y>
          <width>93</width>
          <height>30</height>
         </rect>
@@ -4182,6 +4281,23 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
        </property>
        <property name="text">
         <string>Retour</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="tableView_2">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>90</y>
+         <width>971</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame
+{
+background: rgb(56,58,89);
+border-radius:15px;
+}</string>
        </property>
       </widget>
      </widget>
@@ -4228,30 +4344,20 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
         <string>annuler</string>
        </property>
       </widget>
-      <widget class="QWidget" name="layoutWidget">
+      <widget class="QWidget" name="layoutWidget_2">
        <property name="geometry">
         <rect>
          <x>310</x>
          <y>80</y>
-         <width>391</width>
-         <height>431</height>
+         <width>247</width>
+         <height>146</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_49">
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_48">
           <property name="text">
-           <string>reference_materiel</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="lineEdit_7">
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-          <property name="placeholderText">
-           <string>REFERENCE</string>
+           <string>Tel</string>
           </property>
          </widget>
         </item>
@@ -4262,8 +4368,8 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
           </property>
          </widget>
         </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_8"/>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="lineEdit_29"/>
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="label_52">
@@ -4282,6 +4388,26 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
           </property>
          </widget>
         </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="lineEdit_27">
+          <property name="placeholderText">
+           <string>TEL</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEdit_7">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="placeholderText">
+           <string>REFERENCE</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEdit_8"/>
+        </item>
         <item row="3" column="1">
          <widget class="QLineEdit" name="lineEdit_32"/>
         </item>
@@ -4292,20 +4418,10 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
           </property>
          </widget>
         </item>
-        <item row="4" column="1">
-         <widget class="QLineEdit" name="lineEdit_29"/>
-        </item>
-        <item row="5" column="0">
-         <widget class="QLabel" name="label_48">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_49">
           <property name="text">
-           <string>Tel</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="1">
-         <widget class="QLineEdit" name="lineEdit_27">
-          <property name="placeholderText">
-           <string>TEL</string>
+           <string>reference_materiel</string>
           </property>
          </widget>
         </item>
@@ -4378,863 +4494,33 @@ background:qlineargradient(spread:pad, x1:0.457286, y1:0.381, x2:0.508, y2:1, st
      </widget>
     </widget>
    </widget>
-  </widget>
-  <widget class="QPushButton" name="deconnexion">
-   <property name="geometry">
-    <rect>
-     <x>1310</x>
-     <y>20</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton
-{
-    image: url(C:/Users/Nasreddine/Documents/FuseSmart/IMG/decnx.png);
-    subcontrol-position: right center;
-    subcontrol-origin: padding;
-    left: -2px;
-	border-radius:20px;background-color:transparent;
-
-
-}
-QPushButton:hover
-{
-background-color:transparent;
-    image: url(C:/Users/Nasreddine/Documents/FuseSmart/IMG/decnx.png);
-    subcontrol-position: right center;
-    subcontrol-origin: padding;
-    left: -2px;
-	border-bottom:2px solid rgb(0, 255, 255);
-}
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="photo">
-   <property name="geometry">
-    <rect>
-     <x>1030</x>
-     <y>10</y>
-     <width>61</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#photo
-{
-    image: url(C:/Users/Nasreddine/Documents/FuseSmart/IMG/utilisateur.png);
-    subcontrol-position: right center;
-    subcontrol-origin: padding;
-    left: -2px;
-	border-radius:1px;
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="utilisateur_nom">
-   <property name="geometry">
-    <rect>
-     <x>1090</x>
-     <y>20</y>
-     <width>201</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>century</family>
-     <pointsize>-1</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel{
-background:qlineargradient(spread:pad, x1:0, y1:0.471591, x2:1, y2:0.46, stop:0 rgba(42, 204, 61, 255), stop:1 rgba(215, 255, 82, 255));
-color :white;
-border-radius:10px;
-border-style:none;
-font-size:12px;
-font-style:Georgia ;
-}</string>
-   </property>
-   <property name="text">
-    <string>Name</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>100</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout"/>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Client</string>
+    </attribute>
+    <widget class="QStackedWidget" name="stackedWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>1731</width>
+       <height>861</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="page_7"/>
+     <widget class="QWidget" name="page_8"/>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>Contrat</string>
+    </attribute>
+   </widget>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>lineEdit_9</tabstop>
-  <tabstop>lineEdit_10</tabstop>
-  <tabstop>lineEdit_11</tabstop>
-  <tabstop>dateEdit_2</tabstop>
-  <tabstop>dateEdit_3</tabstop>
-  <tabstop>comboBox_2</tabstop>
-  <tabstop>notification</tabstop>
-  <tabstop>ajouterConge</tabstop>
-  <tabstop>ViderAjouterConge</tabstop>
-  <tabstop>radioAfficherttcong</tabstop>
-  <tabstop>radiosuppconge</tabstop>
-  <tabstop>radiomodifconge</tabstop>
-  <tabstop>tri_cong</tabstop>
-  <tabstop>AfficherCong</tabstop>
-  <tabstop>supprimerCong</tabstop>
-  <tabstop>SupprimerCong</tabstop>
-  <tabstop>LinerechCong</tabstop>
-  <tabstop>rechercherCong</tabstop>
-  <tabstop>lineEdit</tabstop>
-  <tabstop>lineEdit_2</tabstop>
-  <tabstop>lineEdit_3</tabstop>
-  <tabstop>lineEdit_4</tabstop>
-  <tabstop>dateEdit</tabstop>
-  <tabstop>lineEdit_5</tabstop>
-  <tabstop>lineEdit_6</tabstop>
-  <tabstop>comboBox</tabstop>
-  <tabstop>ajouterEmploye</tabstop>
-  <tabstop>viderAjouterEmp</tabstop>
-  <tabstop>ajouter_employe</tabstop>
-  <tabstop>afficher_employes</tabstop>
-  <tabstop>ajouter_conge</tabstop>
-  <tabstop>afficher_conge</tabstop>
-  <tabstop>Linerechemp</tabstop>
-  <tabstop>SupprimerEmp</tabstop>
-  <tabstop>supprimerEmp</tabstop>
   <tabstop>deconnexion</tabstop>
-  <tabstop>radiomodifemploye</tabstop>
-  <tabstop>tri_emp</tabstop>
-  <tabstop>radioAfficherttemp</tabstop>
-  <tabstop>radiosuppemploye</tabstop>
-  <tabstop>AfficherEmp</tabstop>
-  <tabstop>tabWidget</tabstop>
-  <tabstop>tabemployeurs</tabstop>
-  <tabstop>tabConge</tabstop>
  </tabstops>
  <resources/>
- <connections>
-  <connection>
-   <sender>ajouter_conge</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_afficherEmployes</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>193</x>
-     <y>349</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>645</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioAfficherttemp</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_4</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>335</x>
-     <y>170</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>462</x>
-     <y>212</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tabWidget</sender>
-   <signal>currentChanged(int)</signal>
-   <receiver>frame_4</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>152</x>
-     <y>46</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>373</x>
-     <y>205</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>afficher_employes</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_ajouterConge</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>181</x>
-     <y>167</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>631</x>
-     <y>500</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tabWidget</sender>
-   <signal>currentChanged(int)</signal>
-   <receiver>groupBox_ajouterConge</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>144</x>
-     <y>49</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>282</x>
-     <y>154</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ajouter_employe</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_afficherEmployes</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>207</x>
-     <y>142</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>665</x>
-     <y>94</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiosuppemploye</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_3</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>393</x>
-     <y>252</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>406</x>
-     <y>276</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tabWidget</sender>
-   <signal>currentChanged(int)</signal>
-   <receiver>frame_3</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>149</x>
-     <y>44</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>357</x>
-     <y>296</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ajouter_employe</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_Ajouter</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>222</x>
-     <y>142</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>361</x>
-     <y>562</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioAfficherttcong</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_6</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>445</x>
-     <y>172</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>579</x>
-     <y>205</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>afficher_conge</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_afficherEmployes</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>177</x>
-     <y>397</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>269</x>
-     <y>420</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ajouter_conge</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_afficherConges</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>157</x>
-     <y>345</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>281</x>
-     <y>298</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ajouter_employe</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_ajouterConge</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>216</x>
-     <y>135</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>607</x>
-     <y>501</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>afficher_employes</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_afficherEmployes</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>217</x>
-     <y>182</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>690</x>
-     <y>82</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>afficher_conge</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_ajouterConge</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>136</x>
-     <y>393</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>277</x>
-     <y>468</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>afficher_conge</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_Ajouter</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>156</x>
-     <y>395</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>275</x>
-     <y>439</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiomodifemploye</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_4</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>353</x>
-     <y>332</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>462</x>
-     <y>212</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>afficher_employes</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_Ajouter</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>204</x>
-     <y>182</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>367</x>
-     <y>562</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiosuppconge</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_5</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>381</x>
-     <y>252</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>337</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>afficher_conge</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_afficherConges</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>151</x>
-     <y>392</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>269</x>
-     <y>389</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>afficher_employes</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_afficherConges</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>160</x>
-     <y>169</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>287</x>
-     <y>177</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ajouter_employe</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_afficherConges</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>214</x>
-     <y>127</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>302</x>
-     <y>131</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioAfficherttemp</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_3</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>372</x>
-     <y>172</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>386</x>
-     <y>278</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiosuppemploye</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_4</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>445</x>
-     <y>252</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>462</x>
-     <y>212</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioAfficherttcong</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_5</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>338</x>
-     <y>172</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>589</x>
-     <y>302</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tabWidget</sender>
-   <signal>currentChanged(int)</signal>
-   <receiver>frame_6</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>109</x>
-     <y>41</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>563</x>
-     <y>200</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ajouter_conge</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_Ajouter</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>196</x>
-     <y>350</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>279</x>
-     <y>350</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiosuppconge</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_6</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>357</x>
-     <y>250</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>354</x>
-     <y>216</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tabWidget</sender>
-   <signal>currentChanged(int)</signal>
-   <receiver>groupBox_afficherConges</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>137</x>
-     <y>41</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>599</x>
-     <y>104</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tabWidget</sender>
-   <signal>currentChanged(int)</signal>
-   <receiver>groupBox_afficherEmployes</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>118</x>
-     <y>50</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>771</x>
-     <y>123</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiomodifemploye</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_3</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>336</x>
-     <y>332</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>525</x>
-     <y>277</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ajouter_conge</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_ajouterConge</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>204</x>
-     <y>353</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>581</x>
-     <y>455</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiomodifconge</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_7</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>344</x>
-     <y>330</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>617</x>
-     <y>442</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiosuppconge</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_7</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>443</x>
-     <y>237</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>590</x>
-     <y>429</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioAfficherttcong</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_7</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>350</x>
-     <y>162</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>488</x>
-     <y>427</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tabWidget</sender>
-   <signal>currentChanged(int)</signal>
-   <receiver>frame_7</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>147</x>
-     <y>51</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>464</x>
-     <y>428</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tabWidget</sender>
-   <signal>currentChanged(int)</signal>
-   <receiver>frame_5</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>128</x>
-     <y>47</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>573</x>
-     <y>278</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiomodifconge</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_5</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>396</x>
-     <y>318</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>452</x>
-     <y>294</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiomodifconge</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_6</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>388</x>
-     <y>318</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>526</x>
-     <y>220</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiomodifemploye</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_9</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>388</x>
-     <y>325</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>622</x>
-     <y>401</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tabWidget</sender>
-   <signal>currentChanged(int)</signal>
-   <receiver>frame_9</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>104</x>
-     <y>48</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>614</x>
-     <y>399</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiomodifemploye</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_3</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>358</x>
-     <y>321</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>555</x>
-     <y>297</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioAfficherttemp</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_9</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>407</x>
-     <y>165</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>616</x>
-     <y>351</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radiosuppemploye</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_9</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>323</x>
-     <y>245</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>313</x>
-     <y>345</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

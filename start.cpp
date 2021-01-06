@@ -8,9 +8,8 @@ start::start(QWidget *parent) :
 
     ui->setupUi(this);
 
-    QPixmap FS("C:/Users/oussa/Downloads/Gestion personnel/FS.png");
+    QPixmap FS("C:/Users/oussa/Downloads/Gestion personnel (1)/Integration/IMG/FS.png");
     ui->label->setPixmap(FS);
-
 
        connect(timer, SIGNAL(timeout()),this, SLOT(update()));
        timer->start(35);
@@ -21,7 +20,6 @@ start::~start()
 {
     delete ui;
 }
-
 
 void start::update()
 {   counter++;

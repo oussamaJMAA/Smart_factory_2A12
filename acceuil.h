@@ -21,6 +21,9 @@
 #include <QtCharts/QPieSeries>
 #include <QtCharts/QChartView>
 #include <QtCharts>
+#include <QPrinter>
+#include <QPrintDialog>
+#include <QPainter>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -230,6 +233,12 @@ private slots:
 
 
     void on_affiche_mat_activated(const QModelIndex &index);
+
+    void on_pushButton_31_clicked();
+
+
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::acceuil *ui;

@@ -340,7 +340,7 @@ border-radius:10px;
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-    image: url(IMG/x.png);
+    image: url(C:/Users/oussa/Downloads/Gestion personnel (1)/Integration/IMG/x.png);
     subcontrol-position: right center;
     subcontrol-origin: padding;
     left: -2px;

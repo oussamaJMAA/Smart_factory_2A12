@@ -11,6 +11,7 @@
 #include <QFontDialog>
 
 
+
 acceuil::acceuil(QWidget *parent) : QDialog(parent), ui(new Ui::acceuil)
 {
 
@@ -57,6 +58,17 @@ acceuil::acceuil(QWidget *parent) : QDialog(parent), ui(new Ui::acceuil)
     ui->lineEdit_28->setValidator(new  QDoubleValidator(-99.0,99.0,4,this));//prix
 
      ui->lineEdit_30->setValidator(new  QDoubleValidator(-99.0,99.0,4,this));//prix
+
+      ui->lineEdit_26->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+"),NULL));
+      //Rafinnement TableView
+
+      ui->affiche_mat->resizeColumnsToContents();
+      ui->affiche_mat->resizeRowsToContents();
+
+
+ ui->control->setVisible(false);
+      ui->affiche_mat->setSelectionBehavior(QAbstractItemView::SelectRows);
+
 
 
 
@@ -622,6 +634,8 @@ void acceuil::on_pushButton_3_clicked() // Afficher les statistiques
 
 
 {
+
+
     int x= ui->calcul->text().toInt();
     int y=ui->calcul2->text().toInt();
     QPieSeries *series = new QPieSeries();
@@ -638,9 +652,9 @@ void acceuil::on_pushButton_3_clicked() // Afficher les statistiques
        chartView->chart()->setTheme(QChart::ChartThemeDark);
        chartView->chart()->legend()->setFont(QFont("Arial", 7));
 
- chartView->show();
- chartView->resize(800,600);
+chartView->show();
 
+ chartView->resize(800,600);
 
 
 
@@ -1107,14 +1121,16 @@ else ui->lineEdit_27->setStyleSheet("background-color: rgb(0, 0, 0,0)");
 
 void acceuil::on_lineEdit_16_textChanged()
 {if(control_saisie_chaine(ui->lineEdit_16->text()))
-
-
+{
         ui->lineEdit_16->setStyleSheet("background-color: rgb(255, 160, 157)");
 
-        else ui->lineEdit_16->setStyleSheet("background-color: rgb(0, 0, 0,0)");
+    ui->control->setVisible(true);
+}
+        else {ui->lineEdit_16->setStyleSheet("background-color: rgb(0, 0, 0,0)");
+ui->control->setVisible(false);
 
 }
-
+}
 
 
 void acceuil::on_lineEdit_14_textChanged()
@@ -1155,4 +1171,41 @@ ui->lineEdit_31->setText(query.value(0).toString());
 
         }
 }
+}
+
+void acceuil::on_pushButton_31_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(2);
+}
+
+
+
+void acceuil::on_pushButton_4_clicked()
+{
+    QPrinter *printer = new QPrinter(QPrinter::HighResolution);
+                   printer->setOutputFormat(QPrinter::NativeFormat);
+                   printer->setPageSize(QPrinter::A4);
+                   printer->setOrientation(QPrinter::Portrait);
+                   printer->setFullPage(true);
+
+
+               QPrintDialog *printDialog = new QPrintDialog(printer,this);
+               printDialog->setWindowTitle("Impression PDF");
+               if(printDialog->exec())
+               {
+                  QPainter painter;
+                  if(painter.begin(printer))
+                  {
+                      double xscale = double(ui->stackedWidget->width()  );
+                      double yscale = double(ui->stackedWidget->height() );
+                      painter.scale(xscale, yscale);
+                      ui->stackedWidget->render(&painter);
+                      painter.end();
+                  }
+                  else
+                  {
+                      qWarning("failed to open file");
+                     QMessageBox::warning(nullptr,QObject::tr("PDF echoue"),QObject::tr("click cancel to exit!"),QMessageBox::Cancel);
+                  }
+               }
 }
