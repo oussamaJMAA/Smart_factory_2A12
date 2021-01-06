@@ -1182,30 +1182,35 @@ void acceuil::on_pushButton_31_clicked()
 
 void acceuil::on_pushButton_4_clicked()
 {
-    QPrinter *printer = new QPrinter(QPrinter::HighResolution);
-                   printer->setOutputFormat(QPrinter::NativeFormat);
-                   printer->setPageSize(QPrinter::A4);
-                   printer->setOrientation(QPrinter::Portrait);
-                   printer->setFullPage(true);
+
+    QSqlQuery query;
+        QPdfWriter pdf("C:/Users/oussa/Desktop/file.pdf");
+
+        QPainter painter(&pdf);
+
+        painter.setPen(Qt::blue);
+        painter.drawText(4000,400,"Information sur les materiaux ");
+
+    QString ch1 =ui->lineEdit_31->text();
+    QString ch2 =ui->lineEdit_14->text();
+    QString ch3 =ui->lineEdit_12->text();
+    QString ch4 =ui->lineEdit_20->text();
+    QString ch5 =ui->lineEdit_13->text();
+
+    QString date = ui->date_modifier->date().toString();
+
+        painter.setPen(Qt::blue);
+        painter.drawText(100,600,"Reference materiel: "+ch1);
+        painter.drawText(100,800,"Nom materiel : "+ch2);
+        painter.drawText(100,1000,"Quantite materiel : "+ch3);
+        painter.drawText(100,1200,"Prix unitaire  : "+ch4);
+        painter.drawText(100,1400,"Quantite dispo : "+ch5);
+        painter.drawText(100,1600,"date achat  : "+date);
 
 
-               QPrintDialog *printDialog = new QPrintDialog(printer,this);
-               printDialog->setWindowTitle("Impression PDF");
-               if(printDialog->exec())
-               {
-                  QPainter painter;
-                  if(painter.begin(printer))
-                  {
-                      double xscale = double(ui->stackedWidget->width()  );
-                      double yscale = double(ui->stackedWidget->height() );
-                      painter.scale(xscale, yscale);
-                      ui->stackedWidget->render(&painter);
-                      painter.end();
-                  }
-                  else
-                  {
-                      qWarning("failed to open file");
-                     QMessageBox::warning(nullptr,QObject::tr("PDF echoue"),QObject::tr("click cancel to exit!"),QMessageBox::Cancel);
-                  }
-               }
+        painter.end();
+
+        QMessageBox::information(NULL,"Hi!","Text has been Written In The PDF File",QMessageBox::Ok|QMessageBox::Cancel);
+
+
 }
